@@ -1,0 +1,97 @@
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-container h1 {
+    margin: 0;
+    font-size: 50px;
+    color: rgba(225, 225, 225, .01);
+    background: white;
+    background: linear-gradient(rgb(236, 213, 172) 20%, white 80%);
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    animation: animate 15s ease-in-out infinite;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+    @keyframes animate {
+      0%, 100% {
+        background-position: left top;
+      }
+      25%{
+        background-position: right bottom;
+       }
+      50% {
+        background-position: left bottom;
+      }
+      75% {
+        background-position: right top;
+      }   
+  }
+
+.intro {
+    animation: introMotion 1s ease-in;
+}
+
+@keyframes introMotion {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 1rem;
+    }
+}
+
+//Role
+.role-container {
+    width: 400px;
+    overflow: hidden;
+    display: flex;
+}
+
+.role-container .text {
+    position: relative;
+    color: #4070F4;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.role-container .text.first-text {
+    color: #FFF;
+}
+
+.text.sec-text {
+    display: inline-block;
+    width: 0px;
+    overflow: hidden;
+    transition: width 2s ease;
+}
+
+.animateImage {
+    animation: motion 1s ease-in;
+}
+
+@keyframes motion {
+    from {
+        right: 0;
+    }
+
+    to {
+        right: 1.75rem;
+    }
+}
+
+.expertise-label {
+    color: rgba(225, 225, 225, .01);
+    background: white;
+    background: linear-gradient(rgb(233, 153, 14), rgb(247, 10, 10));
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    font-weight: 900;
+    text-shadow: 1px 1px 1px rgb(234, 227, 210);
+}

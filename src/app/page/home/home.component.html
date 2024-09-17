@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div class="main-container" *ngIf="data$ | async as data">
+    <!--Profile-->
+    <section
+        class="relative bg-[url('/assets/img/bg-profile.heic')] bg-no-repeat bg-cover h-[100vh] w-100 flex justify-center items-center">
+        <div class="absolute top-0 left-0 h-[100%] w-[100%] bg-[linear-gradient(rgba(0,0,0,0.5),black)]"></div>
+        <app-profile></app-profile>
+    </section>
+    <!--Experience-->
+    <section class="h-[100vh] bg-[#292929]">
+        <h1 class="font-bold text-white px-7 pt-7">{{data.experience.label}}</h1>
+        <div class="indent-4 px-12 py-7">
+            <app-experience [experienceData]="data.experience"></app-experience>
+        </div>
+    </section>
+    <!--Skills-->
+    <section class="h-[100vh] w-100 bg-gray-250">
+        <h1 class="font-bold px-7 pt-7">{{data.technicalSkills.label}}</h1>
+        <div class="indent-4 px-12 py-7">
+            <app-skills [technicalSkills]="data.technicalSkills"></app-skills>
+        </div>
+    </section>
+</div>

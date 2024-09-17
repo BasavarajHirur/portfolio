@@ -1,0 +1,200 @@
+{
+    "name": "Basavaraja Hiruru",
+    "role": "Web Developer",
+    "objective": {
+        "label": "Objective",
+        "summary": "To gain immense knowledge on professional ethics and to build a career in your high esteemed company where I can exhibit my interpersonal skills and carve a niche for myself in the field"
+    },
+    "experience": {
+        "label": "Experience",
+        "details": [
+            {
+                "id": 1,
+                "company": "HCL Technologies",
+                "role": "Lead Engineer",
+                "duration": "1 Year 3 months, April 2021 to Present",
+                "logo": "/assets/img/exp/HCL-Logo.png",
+                "workDetails": [
+                    "Contribute to design and development of Ecommerce project",
+                    "Experience on developing feature implementation of e-commerce websites",
+                    "Design additional feature for payment method for website",
+                    "Design Breadcrumb as UI design and perform function",
+                    "Develop Campaign product for New year and X-mas Packages"
+                ],
+                "projects": [
+                    {
+                        "name": "Makro",
+                        "location": "Netherland",
+                        "type": "E-Commerce",
+                        "project-details": {
+                            "description": "The Makro sells food and non-food products, usually located in differentsections of the store. Each store also contains a hot-food cafeteria, and a cash machines. The food section always includes a fresh fish section, a wine section, fresh meat and butchery department and refrigerated aisles. The non-food area includes clothing, DIY, office supplies, electricals, computing, and seasonal such as garden furniture.",
+                            "technologies": [
+                                "HTML",
+                                "SCSS",
+                                "JavaScript",
+                                "VUEJS",
+                                "VUEX",
+                                "Commerce Tool"
+                            ],
+                            "duration": "Aug 2021 to Feb 2022",
+                            "responsibilities": "Developed new features like Mattress campaign, developed campaign products like X-Mas Packages, Developed Breadcrumbs, Developed one step checkout, updated mini-cart feature, Added content at commerce tool, Handled critical bugs"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "company": "Wunderman Thompson Commerce",
+                "role": "Lead Engineer",
+                "duration": "1 Year 3 months, April 2021 to Present",
+                "logo": "/assets/img/exp/Wunderman-Thompson.png",
+                "workDetails": [
+                    "Contribute to design and development of Ecommerce project",
+                    "Experience on developing feature implementation of e-commerce websites",
+                    "Design additional feature for payment method for website",
+                    "Design Breadcrumb as UI design and perform function",
+                    "Develop Campaign product for New year and X-mas Packages"
+                ],
+                "projects": [
+                    {
+                        "name": "Makro",
+                        "location": "Netherland",
+                        "type": "E-Commerce",
+                        "project-details": {
+                            "description": "The Makro sells food and non-food products, usually located in differentsections of the store. Each store also contains a hot-food cafeteria, and a cash machines. The food section always includes a fresh fish section, a wine section, fresh meat and butchery department and refrigerated aisles. The non-food area includes clothing, DIY, office supplies, electricals, computing, and seasonal such as garden furniture.",
+                            "technologies": [
+                                "HTML",
+                                "SCSS",
+                                "JavaScript",
+                                "VUEJS",
+                                "VUEX",
+                                "Commerce Tool"
+                            ],
+                            "duration": "Aug 2021 to Feb 2022",
+                            "responsibilities": "Developed new features like Mattress campaign, developed campaign products like X-Mas Packages, Developed Breadcrumbs, Developed one step checkout, updated mini-cart feature, Added content at commerce tool, Handled critical bugs"
+                        }
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "company": "Spider Focus Solutions",
+                "role": "Lead Engineer",
+                "duration": "1 Year 3 months, April 2021 to Present",
+                "logo": "/assets/img/exp/logo.png",
+                "workDetails": [
+                    "Contribute to design and development of Ecommerce project",
+                    "Experience on developing feature implementation of e-commerce websites",
+                    "Design additional feature for payment method for website",
+                    "Design Breadcrumb as UI design and perform function",
+                    "Develop Campaign product for New year and X-mas Packages"
+                ],
+                "projects": [
+                    {
+                        "name": "Makro",
+                        "location": "Netherland",
+                        "type": "E-Commerce",
+                        "project-details": {
+                            "description": "The Makro sells food and non-food products, usually located in differentsections of the store. Each store also contains a hot-food cafeteria, and a cash machines. The food section always includes a fresh fish section, a wine section, fresh meat and butchery department and refrigerated aisles. The non-food area includes clothing, DIY, office supplies, electricals, computing, and seasonal such as garden furniture.",
+                            "technologies": [
+                                "HTML",
+                                "SCSS",
+                                "JavaScript",
+                                "VUEJS",
+                                "VUEX",
+                                "Commerce Tool"
+                            ],
+                            "duration": "Aug 2021 to Feb 2022",
+                            "responsibilities": "Developed new features like Mattress campaign, developed campaign products like X-Mas Packages, Developed Breadcrumbs, Developed one step checkout, updated mini-cart feature, Added content at commerce tool, Handled critical bugs"
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    "technicalSkills": {
+        "label": "Technical Skills",
+        "primary": {
+            "label": "Technical Skills",
+            "details": [
+                {
+                    "name": "Angular",
+                    "img": "/assets/img/skills/primary/angular-144.png"
+                },
+                {
+                    "name": "JavaScript",
+                    "img": "/assets/img/skills/primary/javascript-144.png"
+                },
+                {
+                    "name": "HTML/HTML5",
+                    "img": "/assets/img/skills/primary/html-144.png"
+                },
+                {
+                    "name": "CSS/CSS3",
+                    "img": "/assets/img/skills/primary/css-144.png"
+                },
+                {
+                    "name": "SCSS",
+                    "img": "/assets/img/skills/primary/css-144.png"
+                },
+                {
+                    "name": "TailWind",
+                    "img": "/assets/img/skills/primary/tailwind-css-144.png"
+                },
+                {
+                    "name": "VueJS",
+                    "img": "/assets/img/skills/primary/vuejs-144.png"
+                }
+            ]
+        },
+        "secondary": {
+            "label": "secondary Skills",
+            "details": [
+                {
+                    "name": "NodeJS",
+                    "img": "/assets/img/skills/secondary/nodejs-144.png"
+                },
+                {
+                    "name": "MongoDB",
+                    "img": "/assets/img/skills/secondary/mongodb-144.png"
+                },
+                {
+                    "name": "MySQL",
+                    "img": "/assets/img/skills/secondary/mysql-144.png"
+                },
+                {
+                    "name": "AWS",
+                    "img": "/assets/img/skills/secondary/aws-144.png"
+                },
+                {
+                    "name": "Ion",
+                    "img": ""
+                }
+            ]
+        },
+        "others": {
+            "label": "Other Skill set",
+            "details": [
+                {
+                    "name": "Git",
+                    "img": "/assets/img/skills/others/git-96.png"
+                },
+                {
+                    "name": "Jira",
+                    "img": "/assets/img/skills/others/jira-96.png"
+                },
+                {
+                    "name": "Figma",
+                    "img": "/assets/img/skills/others/figma-96.png"
+                }
+            ]
+        }
+    },
+    "education": {
+        "type": "Education",
+        "details": []
+    },
+    "contactDetails": [
+        {}
+    ]
+}

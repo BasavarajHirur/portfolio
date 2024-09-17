@@ -1,0 +1,19 @@
+.custom-style {
+    scroll-snap-type: x mandatory;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+}
+
+.scroll-container::-webkit-scrollbar{
+    display: none;
+}
+
+.custom-style .custom-exp {
+    flex:0 0 100%;
+    animation: play linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 50%;
+    scroll-snap-align: start;
+}
