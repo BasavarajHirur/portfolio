@@ -1,1 +1,45 @@
-<p>education works!</p>
+<div>
+    <div class="md:flex mb-4">
+        <div class="shrink-0 grow-0 md:basis-[300px]">
+            <img [src]="graduationDetails.img" class="md:w-[300px] md:h-[200px] rounded-md">
+        </div>
+        <aside class="text-base leading-relaxed text-gray-500 dark:text-gray-400 p-4 shrink-0 grow-0 md:basis-[500px]">
+            I hold a {{graduationDetails.board}} from the University of
+            <span class="font-bold">{{graduationDetails.institute}}
+                {{graduationDetails.place}}</span>,
+            {{graduationDetails.university}},
+            which I completed in {{graduationDetails.year}}. During my studies, I focused on programming languages such
+            as javascript, html, css, sql
+            Algorithms, and Web Development, which helped me build a strong foundation in software development.
+        </aside>
+    </div>
+
+    <div class="md:flex flex-row-reverse justify-start mb-4">
+        <div class="shrink-0 grow-0 md:basis-[300px]">
+            <img [src]="intermediateDetails.img" class="md:w-[300px] md:h-[200px] rounded-md">
+        </div>
+        <aside class="text-base leading-relaxed text-gray-500 dark:text-gray-400 p-4 shrink-0 grow-0 md:basis-[500px]">
+            I completed my Technical Diploma at <span class="font-bold">{{intermediateDetails.institute}}
+                {{intermediateDetails.place}}</span> College
+            in {{intermediateDetails.year}},
+            where I specialized in the electrical and electronics stream, concentrating on Physics,
+            and Mathematics. This background sparked my interest in technology and problem-solving.
+        </aside>
+    </div>
+
+    <div class="md:flex mb-4">
+        <div class="shrink-0 grow-0 md:basis-[300px]">
+            <img [src]="highSchoolDetails.img" class="md:w-[300px] md:h-[200px] rounded-md">
+        </div>
+        <aside class="text-base leading-relaxed text-gray-500 dark:text-gray-400 p-4 shrink-0 grow-0 md:basis-[500px]">
+            I earned my Secondary School Certificate from
+            <span class="font-bold">{{highSchoolDetails.institute}}
+                {{highSchoolDetails.place}}</span>,
+            High School in 2018,
+            where I developed essential skills in various subjects that prepared me for my further education.
+            Overall, my educational experiences have equipped me with both technical knowledge and analytical skills
+            that
+            I believe are valuable in this role.
+        </aside>
+    </div>
+</div>

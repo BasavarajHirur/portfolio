@@ -1,1 +1,26 @@
-<p>contact works!</p>
+<div class="relative">
+    <div class="pb-7">
+        <div class="text-gray-100">
+            <span class="inline-block w-[80px] font-bold text-[18px] text-white">E-mail:</span>
+            {{primaryContact.mail}}
+        </div>
+        <div class="text-gray-100">
+            <span class="inline-block w-[80px] font-bold text-[18px] text-white">Phone:</span>
+            {{primaryContact.phone}}
+        </div>
+        <div class="text-gray-100">
+            <span class="inline-block w-[80px] font-bold text-[18px] text-white">DOB:</span>
+            {{primaryContact.dob}}
+        </div>
+        <div class="text-gray-100">
+            <span class="inline-block w-[80px] font-bold text-[18px] text-white">Place:</span>
+            {{primaryContact.place}}
+        </div>
+    </div>
+    <div class="absolute flex bottom-2 right-2">
+        <div class="p-1 bg-gray-700 m-1 rounded-lg shadow-md shadow-gray-800" *ngFor="let icon of socialMediaDetails">
+            <img class="w-[35px] h-[35x] cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out"
+                [src]="icon.img" [alt]="icon.label">
+        </div>
+    </div>
+</div>

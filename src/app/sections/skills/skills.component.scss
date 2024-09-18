@@ -1,0 +1,29 @@
+.animate-secondary-class {
+    transform: translateX(0%);
+    animation: play 1s linear;
+}
+
+@keyframes play {
+    from {
+        transform: translateX(-20%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.animate-other-class {
+    transform: translateX(0%);
+    animation: playOther 1s linear;
+}
+
+@keyframes playOther {
+    from {
+        transform: translateX(20%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}

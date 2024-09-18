@@ -4,33 +4,59 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ContactComponent, EducationComponent, ExperienceComponent, ProfileComponent, SkillsComponent, ToolsComponent } from './sections';
+import {
+  ContactComponent,
+  EducationComponent,
+  ExperienceComponent,
+  ProfileComponent,
+  SkillsComponent
+} from './sections';
 import { HeaderComponent, HomeComponent } from './page';
-import { ExperienceDetailsComponent, ProjectDetailsComponent } from './components';
+import {
+  AnimateSkillsComponent,
+  ExperienceDetailsComponent,
+  OtherSkillsComponent,
+  PrimarySkillsComponent,
+  ProjectDetailsComponent,
+  SecondarySkillsComponent,
+  SkillExperienceDetailsComponent
+} from './components';
 import { ServiceService } from './service/service.service';
-import { AnimateSkillsComponent, PrimarySkillsComponent, SecondarySkillsComponent } from './components/skills';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { ScrollingAnimationDirective } from './director/scrolling-animation.directive';
+import { CommonEffect, commonReducer } from './store';
 
 @NgModule({
   declarations: [
     AppComponent,
     ExperienceComponent,
     EducationComponent,
-    SkillsComponent,
-    ToolsComponent,
     ContactComponent,
     HeaderComponent,
     HomeComponent,
     ProfileComponent,
     ExperienceDetailsComponent,
     ProjectDetailsComponent,
+    SkillsComponent,
     PrimarySkillsComponent,
     SecondarySkillsComponent,
-    AnimateSkillsComponent
+    AnimateSkillsComponent,
+    SkillExperienceDetailsComponent,
+    OtherSkillsComponent,
+    ScrollingAnimationDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({}, {}),
+    EffectsModule.forRoot([]),
+    StoreModule.forFeature('data', commonReducer),
+    EffectsModule.forFeature([CommonEffect]),
+  ],
+  exports: [
+    ScrollingAnimationDirective
   ],
   providers: [ServiceService],
   bootstrap: [AppComponent]

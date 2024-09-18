@@ -1,4 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { selectSecondarySkillDetails } from 'src/app/store';
 
 @Component({
   selector: 'app-secondary-skills',
@@ -7,10 +9,16 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 
 export class SecondarySkillsComponent implements OnInit {
-  @Input('technicalSkills') technicalSkills: any;
+  public secondarySkills$: any;
   public secondarySkills: any = [];
 
+  constructor(private store: Store) {
+  }
+
   ngOnInit(): void {
-    this.secondarySkills = this.technicalSkills.primary.details;
+    this.secondarySkills$ = this.store.select(selectSecondarySkillDetails);
+    this.secondarySkills$.subscribe((res: any) => {
+      this.secondarySkills = res;
+    })
   }
 }

@@ -1,5 +1,4 @@
 import { Component, ElementRef, Input, OnInit } from '@angular/core';
-import { debounce } from 'rxjs';
 
 @Component({
   selector: 'app-experience-details',

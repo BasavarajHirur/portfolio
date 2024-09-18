@@ -1,8 +1,18 @@
-<div class="flex flex-wrap gap-4">
-    <div class="h-[200px] w-[200px] bg-gray-200 hover:bg-gray-100 shadow-md shadow-gray-500 transition-all duration-300 ease-in-out"
-        *ngFor="let skill of primarySkills">
-        <img class="ml-auto mr-auto hover:scale-105 transition-transform duration-300 ease-in-out" [src]="skill.img"
-            loading="lazy">
-        <p class="text-lg text-center font-bold text-gray-600">{{ skill.name }}</p>
+<div class="h-[220px] w-[75%] overflow-x-hidden mx-auto scroll-smooth" id="skill-container">
+    <div class="flex gap-4 items-center h-[100%] px-[10px]" id="primary-skills">
+        <div class="shrink-0 grow-0 md:basis-[200px] md:h-[200px] sm:basis-[100px] sm:h-[100px] rounded-md bg-gray-200 hover:scale-105 hover:bg-gray-100 hover:shadow-md shadow-gray-500 transition-all duration-300 ease-in-out cursor-pointer"
+            *ngFor="let skill of primarySkills" title="Click here to see details" (click)="showSkillModalDetials(true)">
+            <img class="ml-auto mr-auto" [src]="skill.img" loading="lazy" title="Click here to see details">
+            <p class="md:text-lg sm:text-md text-center font-bold text-gray-600">{{ skill.name }}</p>
+        </div>
     </div>
+</div>
+<button
+    class="absolute left-4 top-[50%] text-[40px] ml-2 shadow-md bg-gray-400 shadow-gray-700 rounded-md hover:text-white hover:bg-gray-500 transition-all duration-300 linear"
+    (click)="forward()">&#9754;</button>
+<button
+    class="absolute right-4 top-[50%] text-[40px] bg-gray-400 shadow-md shadow-gray-700 rounded-md hover:text-white hover:bg-gray-500 transition-all duration-300 linear"
+    (click)="reverse()"> &#9755;</button>
+<div *ngIf="showDetails">
+    <app-skill-experience-details></app-skill-experience-details>
 </div>

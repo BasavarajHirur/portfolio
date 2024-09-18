@@ -1,0 +1,7 @@
+<div class="flex flex-wrap gap-4 justify-center">
+    <div class="flex flex-col justify-center items-center md:h-[100px] md:w-[100px] sm:h-[80px] rounded-md sm:w-[80px] bg-gray-200 hover:scale-105 hover:bg-gray-100 transition-all duration-300 ease-in-out cursor-pointer"
+        *ngFor="let skill of otherSkills">
+        <img class="ml-auto mr-auto" [src]="skill.img" loading="lazy">
+        <h3 class="text-md font-bold text-gray-600">{{ skill.name }}</h3>
+    </div>
+</div>

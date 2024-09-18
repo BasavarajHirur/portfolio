@@ -119,7 +119,11 @@
             "details": [
                 {
                     "name": "Angular",
-                    "img": "/assets/img/skills/primary/angular-144.png"
+                    "img": "/assets/img/skills/primary/angular-144.png",
+                    "exp-details": {
+                        "experience": "4 Years",
+                        "projects": []
+                    }
                 },
                 {
                     "name": "JavaScript",
@@ -152,23 +156,27 @@
             "details": [
                 {
                     "name": "NodeJS",
-                    "img": "/assets/img/skills/secondary/nodejs-144.png"
+                    "img": "/assets/img/skills/secondary/nodejs-65.png"
                 },
                 {
                     "name": "MongoDB",
-                    "img": "/assets/img/skills/secondary/mongodb-144.png"
+                    "img": "/assets/img/skills/secondary/mongodb-65.png"
                 },
                 {
                     "name": "MySQL",
-                    "img": "/assets/img/skills/secondary/mysql-144.png"
+                    "img": "/assets/img/skills/secondary/mysql-65.png"
                 },
                 {
                     "name": "AWS",
-                    "img": "/assets/img/skills/secondary/aws-144.png"
+                    "img": "/assets/img/skills/secondary/amazon-aws-65.png"
                 },
                 {
-                    "name": "Ion",
-                    "img": ""
+                    "name": "XML",
+                    "img": "/assets/img/skills/secondary/xml-65.png"
+                },
+                {
+                    "name": "XSLT",
+                    "img": "/assets/img/skills/secondary/xsl-64.png"
                 }
             ]
         },
@@ -177,24 +185,81 @@
             "details": [
                 {
                     "name": "Git",
-                    "img": "/assets/img/skills/others/git-96.png"
+                    "img": "/assets/img/skills/others/git-50.png"
                 },
                 {
                     "name": "Jira",
-                    "img": "/assets/img/skills/others/jira-96.png"
+                    "img": "/assets/img/skills/others/jira-50.png"
                 },
                 {
                     "name": "Figma",
-                    "img": "/assets/img/skills/others/figma-96.png"
+                    "img": "/assets/img/skills/others/figma-50.png"
+                },
+                {
+                    "name": "Figma",
+                    "img": "/assets/img/skills/others/visual-studio-code-50.png"
                 }
             ]
         }
     },
     "education": {
-        "type": "Education",
-        "details": []
+        "label": "Education",
+        "details": {
+            "graduate": {
+                "board": "Bachelor of Engineering",
+                "university": "VTU (Under Autonomous)",
+                "institute": "SJCE (Sri Jayachamarajendra College of Engineering)",
+                "place": "Mysore",
+                "year": "2015-2018",
+                "cgpa": "8.4",
+                "img": "/assets/img/education/SJCE.jpg"
+            },
+            "intermediate": {
+                "board": "Diploma",
+                "university": "DTE",
+                "institute": "MES RN Shetty Polytechnic",
+                "place": "Sirsi",
+                "year": "2012-2015",
+                "cgpa": "80.15",
+                "img": "/assets/img/education/MES.jpg"
+            },
+            "highSchool": {
+                "board": "10th",
+                "university": "KSEEB",
+                "institute": "GHS",
+                "place": "Araleshwar",
+                "year": "2011-2012",
+                "cgpa": "83.36",
+                "img": "/assets/img/education/GHS.jpg"
+            }
+        }
     },
-    "contactDetails": [
-        {}
-    ]
+    "contactDetails": {
+        "primary": {
+            "mail": "basavaraj.hirur746@gmail.com",
+            "phone": "+91 7760744746",
+            "dob": "25-08-1996",
+            "place": "Banglore"
+        },
+        "secondary": {
+            "mail": "basavaraj.hirur746@gmail.com",
+            "phone": "+91 7760744746",
+            "dob": "25-08-1996",
+            "place": "Banglore"
+        },
+        "social": [
+            {
+                "label": "git",
+                "img": "/assets/img/contact/git-48.png"
+            },
+            {
+                "label": "mail",
+                "img": "/assets/img/contact/gmail-48.png"
+            },
+            {
+                "label": "twitter",
+                "img": "/assets/img/contact/twitter-48.png"
+            }
+        ]
+    }
 }

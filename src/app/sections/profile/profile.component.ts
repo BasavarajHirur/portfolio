@@ -15,16 +15,10 @@ export class ProfileComponent implements OnInit {
   }
 
   textSkills() {
-    const text = this.elementRef.nativeElement.querySelector(".sec-skill");
-    setTimeout(() => {
-      text.textContent = "Freelancer";
-    }, 0);
-    setTimeout(() => {
-      text.textContent = "Blogger";
-    }, 4000);
-    setTimeout(() => {
-      text.textContent = "YouTuber";
-    }, 8000); //1s = 1000 milliseconds
+    const skills = this.elementRef.nativeElement.querySelectorAll(".skill");
+    skills.forEach((skill:any, ind:number) => {
+      skill.style.transform = 'translateY()'
+    });
   }
 
   loadText() {

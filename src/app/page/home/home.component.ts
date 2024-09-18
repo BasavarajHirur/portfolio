@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { ServiceService } from 'src/app/service/service.service';
+import { selectUserData, Store_User_data } from 'src/app/store';
 
 @Component({
   selector: 'app-home',
@@ -9,9 +10,10 @@ import { ServiceService } from 'src/app/service/service.service';
 })
 export class HomeComponent {
   public data$!: Observable<any>;
-  constructor(private service: ServiceService) { }
+  constructor(private store: Store) { }
 
   ngOnInit(): void {
-    this.data$ = this.service.getData();
+    this.store.dispatch(Store_User_data());
+    this.data$ = this.store.select(selectUserData);
   }
 }

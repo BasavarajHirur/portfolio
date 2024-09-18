@@ -1,1 +1,39 @@
-<app-experience-details [experienceData]="experienceData"></app-experience-details>
+<ng-container *ngIf="experienceData$ | async">
+    <section class="custom-style flex flex-nowrap rounded-md shadow-md shadow-black" (mouseenter)="mouseEnter()"
+        (mouseleave)="mouseOut()">
+        <div class="custom-exp relative px-12 py-7 h-[70vh] bg-[linear-gradient(#CCCCFF,white)]" [id]="'div'+ exp.id"
+            *ngFor="let exp of experienceData.details">
+            <div class="font-bold text-lg pb-4">
+                {{exp.company}}
+            </div>
+            <div>
+                <span class="font-bold inline-block w-[100px]">Role:</span> {{exp.role}}
+            </div>
+            <div>
+                <span class="font-bold inline-block w-[100px]">Duration:</span> {{exp.duration}}
+            </div>
+            <div>
+                <span class="font-bold inline-block w-[100px]">Summary:</span>
+            </div>
+            <div class="ml-4">
+                <ul>
+                    <li *ngFor="let  summary of exp.workDetails">
+                        <span class="inline-block text-[20px]">&#9733;</span>
+                        {{summary}}
+                    </li>
+                </ul>
+            </div>
+            <div class="ml-4 mt-4">
+                <span class="text-red-600 cursor-pointer underline mr-1">Click here </span>to see Projects...
+            </div>
+            <img [src]="exp.logo" class="absolute top-4 right-7 h-[100px] w-[180px]">
+        </div>
+    </section>
+    <div class="flex flex-column justify-center gap-4 mt-2">
+        <div class="bg-gray-500 rounded-full border-2 border-white-500 h-[20px] w-[20px] cursor-pointer"
+            *ngFor="let  exp of experienceData.details; let i=index" (click)="paginate(i+1)"
+            [style.backgroundColor]="currentPaginateIndex === i+1 ? 'white' : ''" (mouseenter)="mouseEnter()"
+            (mouseleave)="mouseOut()">
+        </div>
+    </div>
+</ng-container>

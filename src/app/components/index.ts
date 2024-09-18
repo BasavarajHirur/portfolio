@@ -1,2 +1,4 @@
-export * from './experience/experience-details/experience-details.component';
-export * from './projects/project-details/project-details.component';
+export * from './experience';
+export * from './projects';
+export * from './experience';
+export * from './skills';
