@@ -1,5 +1,6 @@
-import { Component, ElementRef, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { Subject, takeUntil } from 'rxjs';
 import { selectExperienceDetails } from 'src/app/store';
 
 @Component({
@@ -7,19 +8,28 @@ import { selectExperienceDetails } from 'src/app/store';
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss']
 })
-export class ExperienceComponent implements OnInit {
+export class ExperienceComponent implements OnInit, OnDestroy {
   public experienceData$: any;
   public experienceData: any;
   public currentPaginateIndex: number = 1;
   public interval: any;
 
+  private destroy$ = new Subject<void>();
+  public isSmallScreen = window.innerWidth < 1024;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.isSmallScreen = event.target.innerWidth < 1024;
+  }
+
   constructor(private store: Store, private elementRef: ElementRef) { }
 
   ngOnInit(): void {
     this.experienceData$ = this.store.select(selectExperienceDetails);
-    this.experienceData$.subscribe((res: any) => {
-      this.experienceData = res;
-    })
+    this.experienceData$.pipe(takeUntil(this.destroy$))
+      .subscribe((res: any) => {
+        this.experienceData = res;
+      })
     this.autoSlide();
   }
 
@@ -54,5 +64,10 @@ export class ExperienceComponent implements OnInit {
 
   mouseOut() {
     this.autoSlide();
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

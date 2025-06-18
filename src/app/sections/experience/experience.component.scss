@@ -6,14 +6,23 @@
     scroll-behavior: smooth;
 }
 
-.scroll-container::-webkit-scrollbar{
+.scroll-container::-webkit-scrollbar {
     display: none;
 }
 
 .custom-style .custom-exp {
-    flex:0 0 100%;
+    flex: 0 0 100%;
     animation: play linear;
     animation-timeline: view();
     animation-range: entry 0 cover 50%;
     scroll-snap-align: start;
+}
+
+table tr {
+    vertical-align: top;
+    text-align: left;
+}
+
+table tr th {
+    padding-right: 10px;
 }

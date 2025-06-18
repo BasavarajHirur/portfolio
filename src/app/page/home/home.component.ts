@@ -16,4 +16,9 @@ export class HomeComponent {
     this.store.dispatch(Store_User_data());
     this.data$ = this.store.select(selectUserData);
   }
+
+  handleScroll(sectionId: string) {
+    const el = document.getElementById(sectionId);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
 }

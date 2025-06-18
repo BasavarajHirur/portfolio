@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { Subject, takeUntil } from 'rxjs';
 import { selectContactDetails } from 'src/app/store';
 
 @Component({
@@ -7,18 +8,26 @@ import { selectContactDetails } from 'src/app/store';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements OnInit, OnDestroy {
   public primaryContact: any;
   public socialMediaDetails: any;
+  private destroy$ = new Subject<void>();
 
   constructor(private store: Store) { }
 
   ngOnInit(): void {
-    this.store.select(selectContactDetails).subscribe(
-      (res: any) => {
-        this.primaryContact = res.primary;
-        this.socialMediaDetails = res.social;
-      }
-    )
+    this.store.select(selectContactDetails)
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(
+        (res: any) => {
+          this.primaryContact = res.primary;
+          this.socialMediaDetails = res.social;
+        }
+      )
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

@@ -13,6 +13,16 @@ export const selectExperienceDetails = createSelector(
     (state: InitialState) => state.experienceDetails
 )
 
+export const selectAllProjectDetails = createSelector(
+    selectState,
+    (state: InitialState) => state.projectDetails
+)
+
+export const selectedCompanyProjectDetails = createSelector(
+    selectState,
+    (state: InitialState) => state.selectedCompanyProjectDetails
+)
+
 export const selectSkillDetails = createSelector(
     selectState,
     (state: InitialState) => state.skillDetials
@@ -31,6 +41,11 @@ export const selectSecondarySkillDetails = createSelector(
 export const selectOtherSkillDetails = createSelector(
     selectState,
     (state: InitialState) => state.otherSkills
+)
+
+export const selectModalSkillDetails = createSelector(
+    selectState,
+    (state: InitialState) => state.SkillModalDetails
 )
 
 export const selectEducationDetails = createSelector(

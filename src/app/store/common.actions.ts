@@ -6,6 +6,8 @@ const ERROR_DATA = '[common effects] get error data';
 
 const SHOW_SKILL_MODAL = '[common action] show skill modal';
 
+const GET_PROJECT_DETAILS = '[common action] get project details';
+const GET_SELECTED_SKILL = '[common action] get selected skill';
 
 export const Store_User_data = createAction(
     STORE_USER_DATA
@@ -19,6 +21,16 @@ export const Get_User_data = createAction(
 export const show_skill_modal = createAction(
     SHOW_SKILL_MODAL,
     props<{ isShowing: boolean }>()
+)
+
+export const Get_Company_Project_Details = createAction(
+    GET_PROJECT_DETAILS,
+    props<{ companyId: Number }>()
+)
+
+export const Get_Selected_Skill = createAction(
+    GET_SELECTED_SKILL,
+    props<{ skill: any }>()
 )
 
 export const failed_data = createAction(

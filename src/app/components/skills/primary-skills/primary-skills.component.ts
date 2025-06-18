@@ -1,40 +1,47 @@
-import { Component, ElementRef, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { selectPrimarySkillsDetails, selectSkillModalState, show_skill_modal } from 'src/app/store';
+import { Subject, takeUntil } from 'rxjs';
+import { Get_Selected_Skill, selectPrimarySkillsDetails, selectSkillModalState, show_skill_modal } from 'src/app/store';
 
 @Component({
   selector: 'app-primary-skills',
   templateUrl: './primary-skills.component.html',
   styleUrls: ['./primary-skills.component.scss']
 })
-export class PrimarySkillsComponent implements OnInit {
+export class PrimarySkillsComponent implements OnInit, OnDestroy {
   public primarySkills$: any;
   public primarySkills: any = [];
   public showDetails = false;
+
+  private destroy$ = new Subject<void>();
 
   constructor(private store: Store, private elementRef: ElementRef) {
   }
 
   ngOnInit(): void {
     this.primarySkills$ = this.store.select(selectPrimarySkillsDetails);
-    this.primarySkills$.subscribe((res: any) => {
-      this.primarySkills = res;
-    })
+    this.primarySkills$.pipe(takeUntil(this.destroy$))
+      .subscribe((res: any) => {
+        this.primarySkills = res;
+      })
     this.modalDetails();
   }
 
-  showSkillModalDetials(condition: boolean) {
+  showSkillModalDetials(condition: boolean, skillLabel: string) {
     this.store.dispatch(show_skill_modal({ isShowing: condition }));
+    this.store.dispatch(Get_Selected_Skill({ skill: skillLabel }));
   }
 
   modalDetails() {
-    this.store.select(selectSkillModalState).subscribe(res => {
-      this.showDetails = res;
-      const bodyStyle = document.body.style;
-      res ?
-        bodyStyle.overflow = 'hidden'
-        : bodyStyle.overflow = 'auto'
-    })
+    this.store.select(selectSkillModalState)
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(res => {
+        this.showDetails = res;
+        const bodyStyle = document.body.style;
+        res ?
+          bodyStyle.overflow = 'hidden'
+          : bodyStyle.overflow = 'auto'
+      })
   }
 
   getContainrDetails() {
@@ -52,5 +59,10 @@ export class PrimarySkillsComponent implements OnInit {
   reverse() {
     const { el, width, elWidth } = this.getContainrDetails();
     el.scrollLeft = width + elWidth;
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

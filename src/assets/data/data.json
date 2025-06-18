@@ -12,32 +12,56 @@
                 "id": 1,
                 "company": "HCL Technologies",
                 "role": "Lead Engineer",
-                "duration": "1 Year 3 months, April 2021 to Present",
+                "duration": "2 Year 8 months, July 2022 to Present",
                 "logo": "/assets/img/exp/HCL-Logo.png",
+                "location": "Bangalore,KA",
                 "workDetails": [
-                    "Contribute to design and development of Ecommerce project",
-                    "Experience on developing feature implementation of e-commerce websites",
-                    "Design additional feature for payment method for website",
-                    "Design Breadcrumb as UI design and perform function",
-                    "Develop Campaign product for New year and X-mas Packages"
+                    "Spread headed the development and enhancement of workforce management platform, ensuring seamless user experience and functionality",
+                    "Designed and implemented Data migration tool for Infor M3 application",
+                    "Managed the end-to-end development of email sending of customer bills for bulk record by uploading csv file of user details",
+                    "Provided technical mentorship to junior developer and conducted code reviews to maintain best practices in development",
+                    "Involved in major migration of web application from legacy AngularJS to Angular"
                 ],
                 "projects": [
                     {
-                        "name": "Makro",
-                        "location": "Netherland",
+                        "client": "Ikea",
+                        "name": "Ikea",
+                        "location": "",
                         "type": "E-Commerce",
+                        "serviceProvider": "HCL Technologies",
                         "project-details": {
-                            "description": "The Makro sells food and non-food products, usually located in differentsections of the store. Each store also contains a hot-food cafeteria, and a cash machines. The food section always includes a fresh fish section, a wine section, fresh meat and butchery department and refrigerated aisles. The non-food area includes clothing, DIY, office supplies, electricals, computing, and seasonal such as garden furniture.",
+                            "description": "Providing service for bulk purchase orders using Infor middleware software",
                             "technologies": [
                                 "HTML",
                                 "SCSS",
                                 "JavaScript",
-                                "VUEJS",
-                                "VUEX",
-                                "Commerce Tool"
+                                "Angular",
+                                "Infor OS",
+                                "XML",
+                                "XSLT",
+                                "AWS"
                             ],
                             "duration": "Aug 2021 to Feb 2022",
-                            "responsibilities": "Developed new features like Mattress campaign, developed campaign products like X-Mas Packages, Developed Breadcrumbs, Developed one step checkout, updated mini-cart feature, Added content at commerce tool, Handled critical bugs"
+                            "responsibilities": "Develped widgets for home pages where all can access notifications and service directly, Worked on Infor ION to implement workflows"
+                        }
+                    },
+                    {
+                        "client": "UKG",
+                        "name": "UKG",
+                        "location": "",
+                        "type": "HR",
+                        "serviceProvider": "HCL Technologies",
+                        "project-details": {
+                            "description": "HR Solutions",
+                            "technologies": [
+                                "HTML",
+                                "SCSS",
+                                "JavaScript",
+                                "Angular",
+                                "AngularJS"
+                            ],
+                            "duration": "Aug 2021 to Feb 2022",
+                            "responsibilities": "Migrated AngularJs application to Angular 11"
                         }
                     }
                 ]
@@ -45,9 +69,10 @@
             {
                 "id": 2,
                 "company": "Wunderman Thompson Commerce",
-                "role": "Lead Engineer",
-                "duration": "1 Year 3 months, April 2021 to Present",
+                "role": "Associate System Analyst- Web Development",
+                "duration": "1 Year 3 months, April 2021 to July 2022",
                 "logo": "/assets/img/exp/Wunderman-Thompson.png",
+                "location": "Bangalore,KA",
                 "workDetails": [
                     "Contribute to design and development of Ecommerce project",
                     "Experience on developing feature implementation of e-commerce websites",
@@ -57,9 +82,11 @@
                 ],
                 "projects": [
                     {
+                        "client": "Makro",
                         "name": "Makro",
                         "location": "Netherland",
                         "type": "E-Commerce",
+                        "serviceProvider": "Wunderman Thompson Commerce",
                         "project-details": {
                             "description": "The Makro sells food and non-food products, usually located in differentsections of the store. Each store also contains a hot-food cafeteria, and a cash machines. The food section always includes a fresh fish section, a wine section, fresh meat and butchery department and refrigerated aisles. The non-food area includes clothing, DIY, office supplies, electricals, computing, and seasonal such as garden furniture.",
                             "technologies": [
@@ -67,11 +94,30 @@
                                 "SCSS",
                                 "JavaScript",
                                 "VUEJS",
-                                "VUEX",
                                 "Commerce Tool"
                             ],
                             "duration": "Aug 2021 to Feb 2022",
                             "responsibilities": "Developed new features like Mattress campaign, developed campaign products like X-Mas Packages, Developed Breadcrumbs, Developed one step checkout, updated mini-cart feature, Added content at commerce tool, Handled critical bugs"
+                        }
+                    },
+                    {
+                        "client": "Shark Ninja",
+                        "name": "Shark Ninja",
+                        "location": "US",
+                        "type": "E-Commerce",
+                        "serviceProvider": "Wunderman Thompson Commerce",
+                        "project-details": {
+                            "description": "Shark Ninja is an American designer, marketer and distributor of home devices and appliances. The company's name is formed by combining its two primary brands: Shark which mainly produces Vacuum cleaners and similar devices, and Ninja, which focuses on kitchen appliances such as blenders multi-cookers, coffee makers",
+                            "technologies": [
+                                "HTML",
+                                "SCSS",
+                                "TypeScript",
+                                "Angular",
+                                "Angular PWA",
+                                "Intershop"
+                            ],
+                            "duration": "May 2021 to Aug 2021",
+                            "responsibilities": "Handled Accessibility issues, Handled Landing page stories, Created components at Intershop end and used it in Angular PWA, worked on critical bugs for Go Live"
                         }
                     }
                 ]
@@ -79,33 +125,71 @@
             {
                 "id": 3,
                 "company": "Spider Focus Solutions",
-                "role": "Lead Engineer",
-                "duration": "1 Year 3 months, April 2021 to Present",
+                "role": "Software Engineer",
+                "duration": "2 Year 6 months, Oct 2018 to April 2021",
                 "logo": "/assets/img/exp/logo.png",
+                "location": "Bangalore,KA",
                 "workDetails": [
-                    "Contribute to design and development of Ecommerce project",
-                    "Experience on developing feature implementation of e-commerce websites",
-                    "Design additional feature for payment method for website",
-                    "Design Breadcrumb as UI design and perform function",
-                    "Develop Campaign product for New year and X-mas Packages"
+                    "Contribute to design and development of client and server database applications.",
+                    "Maintain and update the HTML/CSS templates on a regular basis and as required.",
+                    "Experience about Editing and Updating the CSS files",
+                    "Conduct layout design and construction for a variety of websites as assigned. ",
+                    "Provide technical support to other web design team members as directed.",
+                    "Front end development using HTML, CSS, JavaScript, and Vue-JS enabling users to create and monitor Requests."
                 ],
                 "projects": [
                     {
-                        "name": "Makro",
-                        "location": "Netherland",
-                        "type": "E-Commerce",
+                        "name": "LR Solutions",
+                        "client": "LR",
+                        "location": "India",
+                        "type": "Managment",
+                        "serviceProvider": "Spider Focus Solutions",
                         "project-details": {
-                            "description": "The Makro sells food and non-food products, usually located in differentsections of the store. Each store also contains a hot-food cafeteria, and a cash machines. The food section always includes a fresh fish section, a wine section, fresh meat and butchery department and refrigerated aisles. The non-food area includes clothing, DIY, office supplies, electricals, computing, and seasonal such as garden furniture.",
+                            "description": "The Website is about to Company Registration, LLP, OPC, Partnership Registration, Patent Copyright and Trademark Registration with all new features in Legal Solutions. The company aims for excluding the mediators from between the disadvantaged and the Professional and saving the time of former whilst the procedure. It provides fast and end-to-end business incorporation and associated services. It also provides Accounting, Taxation and Legal Services.",
                             "technologies": [
                                 "HTML",
                                 "SCSS",
                                 "JavaScript",
-                                "VUEJS",
-                                "VUEX",
-                                "Commerce Tool"
+                                "Firebase"
                             ],
-                            "duration": "Aug 2021 to Feb 2022",
-                            "responsibilities": "Developed new features like Mattress campaign, developed campaign products like X-Mas Packages, Developed Breadcrumbs, Developed one step checkout, updated mini-cart feature, Added content at commerce tool, Handled critical bugs"
+                            "duration": "March 2020 to Oct 2020",
+                            "responsibilities": "Developed Banner and Nav Bar as per design, Handled content management, Handled critical bugs.Supporting to other Team members."
+                        }
+                    },
+                    {
+                        "name": "IOT Controlling through Web Based Application over the firebase",
+                        "client": "Self",
+                        "location": "India",
+                        "type": "Embedded",
+                        "serviceProvider": "Spider Focus Solutions",
+                        "project-details": {
+                            "description": "The Web application is about to monitor weather forecasting. The data which is monitored by IOT devise is stored in Database on time basis.The person who has authentication able to get data.",
+                            "technologies": [
+                                "HTML",
+                                "CSS",
+                                "JavaScript",
+                                "Firebase"
+                            ],
+                            "duration": "March 2019 to Jan 2020",
+                            "responsibilities": " Developed dashboard for user registration, Handled RestApi to get data and post User Information, Contributed to design layouts."
+                        }
+                    },
+                    {
+                        "name": "Hobbies Hub",
+                        "client": "Self",
+                        "location": "India",
+                        "type": "E-commerce",
+                        "serviceProvider": "Spider Focus Solutions",
+                        "project-details": {
+                            "description": "Selling and buying crafts, photos, Clay items. This is the practice Project for Trainees to train them with different technologies. Here we learned Most of the Front-end technologies.",
+                            "technologies": [
+                                "HTML",
+                                "CSS",
+                                "JavaScript",
+                                "Wordpress"
+                            ],
+                            "duration": "Nov 2018 to Feb 2019",
+                            "responsibilities": "Contributed on designing homepages and product details page"
                         }
                     }
                 ]
@@ -119,34 +203,37 @@
             "details": [
                 {
                     "name": "Angular",
-                    "img": "/assets/img/skills/primary/angular-144.png",
-                    "exp-details": {
-                        "experience": "4 Years",
-                        "projects": []
-                    }
+                    "label": "Angular",
+                    "img": "/assets/img/skills/primary/angular-144.png"
                 },
                 {
                     "name": "JavaScript",
+                    "label": "JavaScript",
                     "img": "/assets/img/skills/primary/javascript-144.png"
                 },
                 {
                     "name": "HTML/HTML5",
+                    "label": "HTML",
                     "img": "/assets/img/skills/primary/html-144.png"
                 },
                 {
                     "name": "CSS/CSS3",
+                    "label": "CSS",
                     "img": "/assets/img/skills/primary/css-144.png"
                 },
                 {
                     "name": "SCSS",
+                    "label": "SCSS",
                     "img": "/assets/img/skills/primary/css-144.png"
                 },
                 {
                     "name": "TailWind",
+                    "label": "TailWind",
                     "img": "/assets/img/skills/primary/tailwind-css-144.png"
                 },
                 {
                     "name": "VueJS",
+                    "label": "VueJS",
                     "img": "/assets/img/skills/primary/vuejs-144.png"
                 }
             ]
@@ -196,7 +283,7 @@
                     "img": "/assets/img/skills/others/figma-50.png"
                 },
                 {
-                    "name": "Figma",
+                    "name": "Visual Studio Code",
                     "img": "/assets/img/skills/others/visual-studio-code-50.png"
                 }
             ]
@@ -207,6 +294,7 @@
         "details": {
             "graduate": {
                 "board": "Bachelor of Engineering",
+                "stream": "Electical and Electronics",
                 "university": "VTU (Under Autonomous)",
                 "institute": "SJCE (Sri Jayachamarajendra College of Engineering)",
                 "place": "Mysore",

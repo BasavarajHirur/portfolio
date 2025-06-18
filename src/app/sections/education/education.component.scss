@@ -1,10 +1,33 @@
-table tr th {
-    padding: 20px;
-    text-align: left;
-    color: aliceblue;
+.animate-secondary-class {
+    transform: translateX(0%);
+    animation: play 1s linear;
 }
 
-table tr td {
-    padding: 10px 20px;
-    color: rgb(243, 241, 239);
+@keyframes play {
+    from {
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+.animate-other-class {
+    transform: translateX(0%);
+    animation: playOther 1s linear;
+}
+
+@keyframes playOther {
+    from {
+        transform: translateX(20%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
 }

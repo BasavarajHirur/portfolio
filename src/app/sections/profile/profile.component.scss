@@ -6,7 +6,6 @@
 
 .text-container h1 {
     margin: 0;
-    font-size: 50px;
     color: rgba(225, 225, 225, .01);
     background: white;
     background: linear-gradient(rgb(236, 213, 172) 20%, white 80%);
@@ -18,20 +17,25 @@
     font-weight: 900;
 }
 
-    @keyframes animate {
-      0%, 100% {
+@keyframes animate {
+
+    0%,
+    100% {
         background-position: left top;
-      }
-      25%{
+    }
+
+    25% {
         background-position: right bottom;
-       }
-      50% {
+    }
+
+    50% {
         background-position: left bottom;
-      }
-      75% {
+    }
+
+    75% {
         background-position: right top;
-      }   
-  }
+    }
+}
 
 .intro {
     animation: introMotion 1s ease-in;
@@ -57,7 +61,6 @@
 .role-container .text {
     position: relative;
     color: #4070F4;
-    font-size: 30px;
     font-weight: 600;
 }
 
