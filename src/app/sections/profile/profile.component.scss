@@ -1,40 +1,11 @@
-.text-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.text-container h1 {
-    margin: 0;
+.profile-name {
     color: rgba(225, 225, 225, .01);
     background: white;
     background: linear-gradient(rgb(236, 213, 172) 20%, white 80%);
     background-repeat: repeat;
     -webkit-background-clip: text;
-    animation: animate 15s ease-in-out infinite;
-    text-align: center;
     text-transform: uppercase;
     font-weight: 900;
-}
-
-@keyframes animate {
-
-    0%,
-    100% {
-        background-position: left top;
-    }
-
-    25% {
-        background-position: right bottom;
-    }
-
-    50% {
-        background-position: left bottom;
-    }
-
-    75% {
-        background-position: right top;
-    }
 }
 
 .intro {
@@ -53,15 +24,14 @@
 
 //Role
 .role-container {
-    width: 400px;
     overflow: hidden;
     display: flex;
 }
 
 .role-container .text {
     position: relative;
-    color: #4070F4;
-    font-weight: 600;
+    color: #40f4d2;
+    font-weight: 800;
 }
 
 .role-container .text.first-text {
