@@ -19,20 +19,20 @@
             </tr>
         </table>
     </div>
-    <div class="flex justify-end pb-4">
+    <div class="flex justify-end pb-4" *ngIf="contactDetails">
         <div class="flex">
-            <a *ngIf="contactDetails.mail.mailId" class="p-1 bg-gray-700 m-1 rounded-lg shadow-md shadow-gray-800"
-                [href]="'mailto:'+contactDetails.mail.mailId" title="Email">
+            <a *ngIf="contactDetails.mail.id" class="p-1 bg-gray-700 m-1 rounded-lg shadow-md shadow-gray-800"
+                [href]="'mailto:'+contactDetails.mail.id" title="Email">
                 <img class="w-[35px] h-[35x] cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out"
                     [src]="contactDetails.mail.img" [alt]="contactDetails.mail.label">
             </a>
-            <a *ngIf="contactDetails.git.gitId" class="p-1 bg-gray-700 m-1 rounded-lg shadow-md shadow-gray-800"
-                [href]="'https://twitter.com/'+contactDetails.git.gitId" target="_blank" title="GitHub">
+            <a *ngIf="contactDetails.git.id" class="p-1 bg-gray-700 m-1 rounded-lg shadow-md shadow-gray-800"
+                [href]="'https://twitter.com/'+contactDetails.git.id" target="_blank" title="GitHub">
                 <img class="w-[35px] h-[35x] cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out"
                     [src]="contactDetails.git.img" [alt]="contactDetails.git.label">
             </a>
-            <a *ngIf="contactDetails.twitter.twitterId" class="p-1 bg-gray-700 m-1 rounded-lg shadow-md shadow-gray-800"
-                [href]="'https://twitter.com/'+contactDetails.twitter.twitterId" target="_blank" title="Twitter">
+            <a *ngIf="contactDetails.twitter.id" class="p-1 bg-gray-700 m-1 rounded-lg shadow-md shadow-gray-800"
+                [href]="'https://twitter.com/'+contactDetails.twitter.id" target="_blank" title="Twitter">
                 <img class="w-[35px] h-[35x] cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out"
                     [src]="contactDetails.twitter.img" [alt]="contactDetails.twitter.label">
             </a>

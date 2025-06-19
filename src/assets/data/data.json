@@ -338,17 +338,17 @@
         "git": {
             "label": "git",
             "img": "/assets/img/contact/git-48.png",
-            "gitId": "BasavarajHirur"
+            "id": "BasavarajHirur"
         },
         "mail": {
             "label": "mail",
             "img": "/assets/img/contact/gmail-48.png",
-            "mailId": "basavaraj.hirur746@gmail.com"
+            "id": "basavaraj.hirur746@gmail.com"
         },
         "twitter": {
             "label": "twitter",
             "img": "/assets/img/contact/twitter-48.png",
-            "twitterId": ""
+            "id": ""
         }
     }
 }
