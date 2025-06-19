@@ -335,19 +335,20 @@
             "dob": "25-08-1996",
             "place": "Banglore"
         },
-        "social": [
-            {
-                "label": "git",
-                "img": "/assets/img/contact/git-48.png"
-            },
-            {
-                "label": "mail",
-                "img": "/assets/img/contact/gmail-48.png"
-            },
-            {
-                "label": "twitter",
-                "img": "/assets/img/contact/twitter-48.png"
-            }
-        ]
+        "git": {
+            "label": "git",
+            "img": "/assets/img/contact/git-48.png",
+            "gitId": "BasavarajHirur"
+        },
+        "mail": {
+            "label": "mail",
+            "img": "/assets/img/contact/gmail-48.png",
+            "mailId": "basavaraj.hirur746@gmail.com"
+        },
+        "twitter": {
+            "label": "twitter",
+            "img": "/assets/img/contact/twitter-48.png",
+            "twitterId": ""
+        }
     }
 }

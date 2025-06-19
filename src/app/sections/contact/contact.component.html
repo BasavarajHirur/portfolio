@@ -1,26 +1,41 @@
 <div class="relative">
     <div class="pb-7">
-        <div class="text-gray-100">
-            <span class="inline-block w-[80px] font-bold text-[18px] text-white">E-mail:</span>
-            {{primaryContact.mail}}
-        </div>
-        <div class="text-gray-100">
-            <span class="inline-block w-[80px] font-bold text-[18px] text-white">Phone:</span>
-            {{primaryContact.phone}}
-        </div>
-        <div class="text-gray-100">
-            <span class="inline-block w-[80px] font-bold text-[18px] text-white">DOB:</span>
-            {{primaryContact.dob}}
-        </div>
-        <div class="text-gray-100">
-            <span class="inline-block w-[80px] font-bold text-[18px] text-white">Place:</span>
-            {{primaryContact.place}}
-        </div>
+        <table class="text-gray-100 text-[18px]">
+            <tr>
+                <th class="font-bold text-left">E-mail:</th>
+                <td> {{primaryContact.mail}}</td>
+            </tr>
+            <tr>
+                <th class="font-bold text-left">Phone:</th>
+                <td>{{primaryContact.phone}}</td>
+            </tr>
+            <tr>
+                <th class="font-bold text-left">DOB:</th>
+                <td> {{primaryContact.dob}}</td>
+            </tr>
+            <tr>
+                <th class="font-bold text-left">Place:</th>
+                <td> {{primaryContact.place}}</td>
+            </tr>
+        </table>
     </div>
-    <div class="absolute flex bottom-2 right-2">
-        <div class="p-1 bg-gray-700 m-1 rounded-lg shadow-md shadow-gray-800" *ngFor="let icon of socialMediaDetails">
-            <img class="w-[35px] h-[35x] cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out"
-                [src]="icon.img" [alt]="icon.label">
+    <div class="flex justify-end pb-4">
+        <div class="flex">
+            <a *ngIf="contactDetails.mail.mailId" class="p-1 bg-gray-700 m-1 rounded-lg shadow-md shadow-gray-800"
+                [href]="'mailto:'+contactDetails.mail.mailId" title="Email">
+                <img class="w-[35px] h-[35x] cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out"
+                    [src]="contactDetails.mail.img" [alt]="contactDetails.mail.label">
+            </a>
+            <a *ngIf="contactDetails.git.gitId" class="p-1 bg-gray-700 m-1 rounded-lg shadow-md shadow-gray-800"
+                [href]="'https://twitter.com/'+contactDetails.git.gitId" target="_blank" title="GitHub">
+                <img class="w-[35px] h-[35x] cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out"
+                    [src]="contactDetails.git.img" [alt]="contactDetails.git.label">
+            </a>
+            <a *ngIf="contactDetails.twitter.twitterId" class="p-1 bg-gray-700 m-1 rounded-lg shadow-md shadow-gray-800"
+                [href]="'https://twitter.com/'+contactDetails.twitter.twitterId" target="_blank" title="Twitter">
+                <img class="w-[35px] h-[35x] cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out"
+                    [src]="contactDetails.twitter.img" [alt]="contactDetails.twitter.label">
+            </a>
         </div>
     </div>
 </div>

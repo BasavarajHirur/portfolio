@@ -10,7 +10,7 @@ import { selectContactDetails } from 'src/app/store';
 })
 export class ContactComponent implements OnInit, OnDestroy {
   public primaryContact: any;
-  public socialMediaDetails: any;
+  public contactDetails: any;
   private destroy$ = new Subject<void>();
 
   constructor(private store: Store) { }
@@ -21,7 +21,7 @@ export class ContactComponent implements OnInit, OnDestroy {
       .subscribe(
         (res: any) => {
           this.primaryContact = res.primary;
-          this.socialMediaDetails = res.social;
+          this.contactDetails = res;
         }
       )
   }

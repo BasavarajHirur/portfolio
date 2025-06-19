@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subject, takeUntil } from 'rxjs';
 import { Get_Selected_Skill, selectPrimarySkillsDetails, selectSkillModalState, show_skill_modal } from 'src/app/store';
@@ -14,6 +14,13 @@ export class PrimarySkillsComponent implements OnInit, OnDestroy {
   public showDetails = false;
 
   private destroy$ = new Subject<void>();
+  public isSmallScreen = window.innerWidth < 1024;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.isSmallScreen = event.target.innerWidth < 1024;
+  }
+
 
   constructor(private store: Store, private elementRef: ElementRef) {
   }
