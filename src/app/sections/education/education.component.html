@@ -1,7 +1,10 @@
 <div>
     <div class="md:flex mb-4" appScrollingAnimation id="secondary">
-        <div class="shrink-0 grow-0 md:basis-[300px]">
-            <img [src]="graduationDetails.img" class="md:w-[300px] md:h-[200px] rounded-md">
+        <div
+            class="shrink-0 grow-0 md:basis-[300px] sm:w-[200px] sm:h-[150px] md:w-[300px] md:h-[200px] bg-[linear-gradient(#333333,#292929)] overflow-hidden rounded-md">
+            <img [src]="graduationDetails.img"
+                class="sm:w-[200px] sm:h-[150px] md:w-[300px] md:h-[200px] rounded-md hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer"
+                loading="lazy">
         </div>
         <aside class="text-base leading-relaxed text-gray-500 dark:text-gray-400 p-4 shrink-0 grow-0 md:basis-[500px]">
             I hold a {{graduationDetails.board}} from the University of
@@ -15,8 +18,11 @@
     </div>
 
     <div class="md:flex flex-row-reverse justify-start mb-4" appScrollingAnimation id="other">
-        <div class="shrink-0 grow-0 md:basis-[300px]">
-            <img [src]="intermediateDetails.img" class="md:w-[300px] md:h-[200px] rounded-md">
+        <div
+            class="shrink-0 grow-0 md:basis-[300px] sm:w-[200px] sm:h-[150px] md:w-[300px] md:h-[200px] bg-[linear-gradient(#333333,#292929)] overflow-hidden rounded-md">
+            <img [src]="intermediateDetails.img"
+                class="sm:w-[200px] sm:h-[150px] md:w-[300px] md:h-[200px] rounded-md hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer"
+                loading="lazy">
         </div>
         <aside class="text-base leading-relaxed text-gray-500 dark:text-gray-400 p-4 shrink-0 grow-0 md:basis-[500px]">
             I completed my Technical Diploma at <span class="font-bold">{{intermediateDetails.institute}}
@@ -28,8 +34,11 @@
     </div>
 
     <div class="md:flex mb-4" appScrollingAnimation id="secondary">
-        <div class="shrink-0 grow-0 md:basis-[300px]">
-            <img [src]="highSchoolDetails.img" class="md:w-[300px] md:h-[200px] rounded-md">
+        <div
+            class="shrink-0 grow-0 md:basis-[300px] sm:w-[200px] sm:h-[150px] md:w-[300px] md:h-[200px] bg-[linear-gradient(#333333,#292929)] overflow-hidden rounded-md">
+            <img [src]="highSchoolDetails.img"
+                class="sm:w-[200px] sm:h-[150px] md:w-[300px] md:h-[200px] rounded-md hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer"
+                loading="lazy">
         </div>
         <aside class="text-base leading-relaxed text-gray-500 dark:text-gray-400 p-4 shrink-0 grow-0 md:basis-[500px]">
             I earned my Secondary School Certificate from
