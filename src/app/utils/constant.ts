@@ -1,0 +1,1 @@
+export const BASE_URL = '/api'; // change to relative url after app deployed ex: '/api'
