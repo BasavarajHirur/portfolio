@@ -26,7 +26,7 @@
                     <span class="flex-1 indent-0">{{summary}}</span>
                 </div>
             </div>
-            <div class="ml-4 mt-4">
+            <div class="ml-4 mt-4" *ngIf="exp.projects.length">
                 <a class="text-red-600 cursor-pointer underline mr-1" (click)="showExpModalDetials(true, exp.id)">Click
                     here </a>
                 to see Projects...
@@ -55,7 +55,7 @@
                     <td>{{exp.location}}</td>
                 </tr>
             </table>
-            <div class="my-4 indent-0">
+            <div class="my-4 indent-0" *ngIf="exp.projects.length">
                 <a class="text-red-600 cursor-pointer underline mr-1" (click)="showExpModalDetials(true, exp.id)">Click
                     here </a>
                 to see Projects...

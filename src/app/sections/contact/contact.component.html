@@ -10,11 +10,6 @@
                 <td>{{primaryContact.phone}}</td>
             </tr>
             <tr>
-                <th class="font-bold text-left">Resume:</th>
-                <td class="text-red-600 underline"><a href="assets/resume/resume.pdf"
-                        download="Basavaraja.Hiruru-Angular-Developer.pdf">Click Here</a></td>
-            </tr>
-            <tr>
                 <th class="font-bold text-left">Place:</th>
                 <td> {{primaryContact.place}}</td>
             </tr>
@@ -25,17 +20,22 @@
             <a *ngIf="contactDetails.mail.id" class="p-1 bg-gray-700 m-1 rounded-lg shadow-md shadow-gray-800"
                 [href]="'mailto:'+contactDetails.mail.id" title="Email">
                 <img class="w-[35px] h-[35x] cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out"
-                    [src]="contactDetails.mail.img" [alt]="contactDetails.mail.label">
+                    src="assets/img/contact/gmail-48.png" [alt]="contactDetails.mail.label">
             </a>
             <a *ngIf="contactDetails.git.id" class="p-1 bg-gray-700 m-1 rounded-lg shadow-md shadow-gray-800"
                 [href]="'https://twitter.com/'+contactDetails.git.id" target="_blank" title="GitHub">
                 <img class="w-[35px] h-[35x] cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out"
-                    [src]="contactDetails.git.img" [alt]="contactDetails.git.label">
+                    src="assets/img/contact/git-48.png" [alt]="contactDetails.git.label">
             </a>
             <a *ngIf="contactDetails.twitter.id" class="p-1 bg-gray-700 m-1 rounded-lg shadow-md shadow-gray-800"
                 [href]="'https://twitter.com/'+contactDetails.twitter.id" target="_blank" title="Twitter">
                 <img class="w-[35px] h-[35x] cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out"
-                    [src]="contactDetails.twitter.img" [alt]="contactDetails.twitter.label">
+                    src="assets/img/contact/twitter-48.png" [alt]="contactDetails.twitter.label">
+            </a>
+            <a class="p-1 bg-gray-700 m-1 rounded-lg shadow-md shadow-gray-800" href="assets/resume/resume.pdf"
+                download="Basavaraja.Hiruru-Angular-Developer.pdf" target="_blank" title="Twitter">
+                <img class="w-[35px] h-[35x] cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out"
+                    src="assets/img/contact/pdf-48.png" [alt]="contactDetails.twitter.label">
             </a>
         </div>
     </div>
