@@ -18,9 +18,9 @@ export const selectAllProjectDetails = createSelector(
     (state: InitialState) => state.projects
 )
 
-export const selectedCompanyProjectDetails = createSelector(
+export const selectedCompany = createSelector(
     selectState,
-    (state: InitialState) => state.selectedCompanyProjectDetails
+    (state: InitialState) => state.selectedCompany
 )
 
 export const selectSkillDetails = createSelector(
@@ -51,6 +51,11 @@ export const selectModalSkillDetails = createSelector(
 export const selectEducationDetails = createSelector(
     selectState,
     (state: InitialState) => state.educationDetails
+)
+
+export const selectProjectModalState = createSelector(
+    selectState,
+    (state: InitialState) => state.isShowingProjectModal
 )
 
 export const selectSkillModalState = createSelector(

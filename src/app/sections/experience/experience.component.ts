@@ -1,7 +1,7 @@
 import { Component, ElementRef, HostListener, Input, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subject, takeUntil } from 'rxjs';
-import { selectExperienceDetails } from 'src/app/store';
+import { Get_Company_Project_Details, selectExperienceDetails, selectProjectModalState, show_project_modal } from 'src/app/store';
 
 @Component({
   selector: 'app-experience',
@@ -13,6 +13,7 @@ export class ExperienceComponent implements OnInit, OnDestroy {
   public experienceData: any;
   public currentPaginateIndex: number = 1;
   public interval: any;
+  public showModalDetails = false;
 
   private destroy$ = new Subject<void>();
   public isSmallScreen = window.innerWidth < 1024;
@@ -31,6 +32,7 @@ export class ExperienceComponent implements OnInit, OnDestroy {
         this.experienceData = res;
       })
     this.autoSlide();
+    this.modalDetails();
   }
 
   paginate(index: number) {
@@ -64,6 +66,23 @@ export class ExperienceComponent implements OnInit, OnDestroy {
 
   mouseOut() {
     this.autoSlide();
+  }
+
+  modalDetails() {
+    this.store.select(selectProjectModalState)
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(res => {
+        this.showModalDetails = res;
+        const bodyStyle = document.body.style;
+        res ?
+          bodyStyle.overflow = 'hidden'
+          : bodyStyle.overflow = 'auto'
+      })
+  }
+
+  showExpModalDetials(condition: boolean, companyId: string) {
+    this.store.dispatch(show_project_modal({ isShowing: condition }));
+    this.store.dispatch(Get_Company_Project_Details({ companyId}));
   }
 
   ngOnDestroy(): void {

@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="ml-4 mt-4">
-                <a [routerLink]="'project-details/'+ exp.id" class="text-red-600 cursor-pointer underline mr-1">Click
+                <a class="text-red-600 cursor-pointer underline mr-1" (click)="showExpModalDetials(true, exp.id)">Click
                     here </a>
                 to see Projects...
             </div>
@@ -55,6 +55,11 @@
                     <td>{{exp.location}}</td>
                 </tr>
             </table>
+            <div class="my-4 indent-0">
+                <a class="text-red-600 cursor-pointer underline mr-1" (click)="showExpModalDetials(true, exp.id)">Click
+                    here </a>
+                to see Projects...
+            </div>
             <img [src]="exp.logo" class="absolute top-1 right-2 h-[40px] w-[60px]">
         </div>
     </section>
@@ -66,3 +71,6 @@
         </div>
     </div>
 </ng-container>
+<div *ngIf="showModalDetails">
+    <app-project-details></app-project-details>
+</div>

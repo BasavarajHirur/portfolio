@@ -1,11 +1,11 @@
 import { createReducer, on } from "@ngrx/store"
-import { Get_Company_Project_Details, Get_Selected_Skill, Get_User_data, show_skill_modal } from "./common.actions"
+import { Get_Company_Project_Details, Get_Selected_Skill, Get_User_data, show_project_modal, show_skill_modal } from "./common.actions"
 
 export interface InitialState {
     userData: any,
     experienceDetails: any;
     projects: any;
-    selectedCompanyProjectDetails: any;
+    selectedCompany: any;
     skillDetials: any;
     primarySkills: any;
     secondarySkills: any;
@@ -14,6 +14,7 @@ export interface InitialState {
     educationDetails: any;
     contactDetails: any;
     isShowingSkillModal: boolean;
+    isShowingProjectModal: boolean;
     error: any
 }
 
@@ -21,7 +22,7 @@ export const initialState: InitialState = {
     userData: null,
     experienceDetails: null,
     projects: null,
-    selectedCompanyProjectDetails: null,
+    selectedCompany: null,
     skillDetials: null,
     primarySkills: null,
     secondarySkills: null,
@@ -30,6 +31,7 @@ export const initialState: InitialState = {
     educationDetails: null,
     contactDetails: null,
     isShowingSkillModal: false,
+    isShowingProjectModal: false,
     error: null
 }
 
@@ -57,10 +59,15 @@ export const commonReducer = createReducer(
         }
     ),
     on(
+        show_project_modal,
+        (state: InitialState, { isShowing }) => ({ ...state, isShowingProjectModal: isShowing })
+
+    ),
+    on(
         Get_Company_Project_Details,
         (state: InitialState, { companyId }) => {
-            const selectedCompanyProjectDetails = state.experienceDetails.filter((res: any) => res.id === companyId);
-            return ({ ...state, selectedCompanyProjectDetails })
+            const selectedCompany = state.experienceDetails.details.find((res: any) => res.id === companyId);
+            return ({ ...state, selectedCompany })
         }
     ),
     on(
