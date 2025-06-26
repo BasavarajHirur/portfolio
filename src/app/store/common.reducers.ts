@@ -4,7 +4,7 @@ import { Get_Company_Project_Details, Get_Selected_Skill, Get_User_data, show_sk
 export interface InitialState {
     userData: any,
     experienceDetails: any;
-    projectDetails: any;
+    projects: any;
     selectedCompanyProjectDetails: any;
     skillDetials: any;
     primarySkills: any;
@@ -20,7 +20,7 @@ export interface InitialState {
 export const initialState: InitialState = {
     userData: null,
     experienceDetails: null,
-    projectDetails: null,
+    projects: null,
     selectedCompanyProjectDetails: null,
     skillDetials: null,
     primarySkills: null,
@@ -40,12 +40,13 @@ export const commonReducer = createReducer(
         (state: InitialState, { userData }) => {
             const { details } = userData.experience;
             const allProjects = details.map((res: any) => res.projects).flat();
+
             return (
                 {
                     ...state,
                     userData,
                     experienceDetails: userData.experience,
-                    projectDetails: allProjects,
+                    projects: allProjects,
                     primarySkills: userData.technicalSkills.primary.details,
                     secondarySkills: userData.technicalSkills.secondary.details,
                     otherSkills: userData.technicalSkills.others.details,
@@ -70,8 +71,8 @@ export const commonReducer = createReducer(
     on(
         Get_Selected_Skill,
         (state: InitialState, { skill }) => {
-            const skillModalDetails = state.projectDetails.reduce((acc: any, el: any) => {
-                const tech = el['project-details'].technologies;
+            const skillModalDetails = state.projects.reduce((acc: any, el: any) => {
+                const tech = el.projectDetails.technologies;
                 const skills = tech.map((el: any) => el.toUpperCase());
 
                 acc.label = skill;
@@ -81,7 +82,8 @@ export const commonReducer = createReducer(
                 }
 
                 return acc;
-            }, { projects: [], companies: [] })
+            }, { projects: [], companies: [] });
+
             return ({ ...state, SkillModalDetails: skillModalDetails })
         }
     )

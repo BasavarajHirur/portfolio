@@ -15,7 +15,7 @@ export const selectExperienceDetails = createSelector(
 
 export const selectAllProjectDetails = createSelector(
     selectState,
-    (state: InitialState) => state.projectDetails
+    (state: InitialState) => state.projects
 )
 
 export const selectedCompanyProjectDetails = createSelector(
