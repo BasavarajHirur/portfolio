@@ -41,8 +41,10 @@
 .text.sec-text {
     display: inline-block;
     width: 0px;
+    white-space: nowrap;
     overflow: hidden;
     transition: width 2s ease;
+    word-break: keep-all;
 }
 
 .animateImage {
