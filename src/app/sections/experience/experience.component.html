@@ -1,27 +1,30 @@
 <ng-container *ngIf="experienceData$ | async">
     <section *ngIf="!isSmallScreen" class="custom-style flex flex-nowrap rounded-md shadow-md shadow-black"
         (mouseenter)="mouseEnter()" (mouseleave)="mouseOut()">
-        <div class="custom-exp relative px-12 py-7 h-[70vh] bg-[linear-gradient(#CCCCFF,white)]" [id]="'div'+ exp.id"
-            *ngFor="let exp of experienceData.details">
-            <div class="font-bold text-lg pb-4">
+        <div class="custom-exp relative px-12 py-7 h-[80vh] bg-[linear-gradient(#CCCCFF,white)] overflow-x-hidden"
+            [id]="'div'+ exp.id" *ngFor="let exp of experienceData.details">
+            <div class="font-bold text-lg pb-4 indent-0">
                 {{exp.company}}
             </div>
-            <div>
-                <span class="font-bold inline-block w-[100px]">Role:</span> {{exp.role}}
-            </div>
-            <div>
-                <span class="font-bold inline-block w-[100px]">Duration:</span> {{exp.duration}}
-            </div>
-            <div>
-                <span class="font-bold inline-block w-[100px]">Summary:</span>
-            </div>
+            <table style="border-spacing: 10px;">
+                <tr>
+                    <th class="font-bold">Role:</th>
+                    <td>{{exp.role}}</td>
+                </tr>
+                <tr>
+                    <th class="font-bold">Duration:</th>
+                    <td>{{exp.DOJ}} <span class="font-bold">-</span> {{exp.DOL || 'Present'}}</td>
+                </tr>
+                <tr>
+                    <th class="font-bold">Location:</th>
+                    <td>{{exp.location}}</td>
+                </tr>
+            </table>
             <div class="ml-4">
-                <ul>
-                    <li *ngFor="let  summary of exp.workDetails">
-                        <span class="inline-block text-[20px]">&#9733;</span>
-                        {{summary}}
-                    </li>
-                </ul>
+                <div *ngFor="let summary of exp.workDetails" class="flex items-baseline">
+                    <span class="text-[20px] pr-2 leading-2">&#9733;</span>
+                    <span class="flex-1 indent-0">{{summary}}</span>
+                </div>
             </div>
             <div class="ml-4 mt-4">
                 <a [routerLink]="'project-details/'+ exp.id" class="text-red-600 cursor-pointer underline mr-1">Click
