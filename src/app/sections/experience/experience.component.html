@@ -36,7 +36,7 @@
     </section>
     <section *ngIf="isSmallScreen" class="custom-style flex flex-nowrap rounded-md shadow-md shadow-black"
         (mouseenter)="mouseEnter()" (mouseleave)="mouseOut()">
-        <div class="custom-exp relative px-2 h-[280px] bg-[linear-gradient(#CCCCFF,white)]" [id]="'div'+ exp.id"
+        <div class="custom-exp relative px-2 bg-[linear-gradient(#CCCCFF,white)]" [id]="'div'+ exp.id"
             *ngFor="let exp of experienceData.details">
             <div class="font-bold  text-center mt-11 pb-4">
                 {{exp.company}}
