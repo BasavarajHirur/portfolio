@@ -29,7 +29,7 @@
                         "location": "",
                         "type": "E-Commerce",
                         "serviceProvider": "HCL Technologies",
-                        "project-details": {
+                        "projectDetails": {
                             "description": "Providing service for bulk purchase orders using Infor middleware software",
                             "technologies": [
                                 "HTML",
@@ -51,7 +51,7 @@
                         "location": "",
                         "type": "HR",
                         "serviceProvider": "HCL Technologies",
-                        "project-details": {
+                        "projectDetails": {
                             "description": "HR Solutions",
                             "technologies": [
                                 "HTML",
@@ -87,7 +87,7 @@
                         "location": "Netherland",
                         "type": "E-Commerce",
                         "serviceProvider": "Wunderman Thompson Commerce",
-                        "project-details": {
+                        "projectDetails": {
                             "description": "The Makro sells food and non-food products, usually located in differentsections of the store. Each store also contains a hot-food cafeteria, and a cash machines. The food section always includes a fresh fish section, a wine section, fresh meat and butchery department and refrigerated aisles. The non-food area includes clothing, DIY, office supplies, electricals, computing, and seasonal such as garden furniture.",
                             "technologies": [
                                 "HTML",
@@ -106,7 +106,7 @@
                         "location": "US",
                         "type": "E-Commerce",
                         "serviceProvider": "Wunderman Thompson Commerce",
-                        "project-details": {
+                        "projectDetails": {
                             "description": "Shark Ninja is an American designer, marketer and distributor of home devices and appliances. The company's name is formed by combining its two primary brands: Shark which mainly produces Vacuum cleaners and similar devices, and Ninja, which focuses on kitchen appliances such as blenders multi-cookers, coffee makers",
                             "technologies": [
                                 "HTML",
@@ -144,7 +144,7 @@
                         "location": "India",
                         "type": "Managment",
                         "serviceProvider": "Spider Focus Solutions",
-                        "project-details": {
+                        "projectDetails": {
                             "description": "The Website is about to Company Registration, LLP, OPC, Partnership Registration, Patent Copyright and Trademark Registration with all new features in Legal Solutions. The company aims for excluding the mediators from between the disadvantaged and the Professional and saving the time of former whilst the procedure. It provides fast and end-to-end business incorporation and associated services. It also provides Accounting, Taxation and Legal Services.",
                             "technologies": [
                                 "HTML",
@@ -162,7 +162,7 @@
                         "location": "India",
                         "type": "Embedded",
                         "serviceProvider": "Spider Focus Solutions",
-                        "project-details": {
+                        "projectDetails": {
                             "description": "The Web application is about to monitor weather forecasting. The data which is monitored by IOT devise is stored in Database on time basis.The person who has authentication able to get data.",
                             "technologies": [
                                 "HTML",
@@ -180,7 +180,7 @@
                         "location": "India",
                         "type": "E-commerce",
                         "serviceProvider": "Spider Focus Solutions",
-                        "project-details": {
+                        "projectDetails": {
                             "description": "Selling and buying crafts, photos, Clay items. This is the practice Project for Trainees to train them with different technologies. Here we learned Most of the Front-end technologies.",
                             "technologies": [
                                 "HTML",

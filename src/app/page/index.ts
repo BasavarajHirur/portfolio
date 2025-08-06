@@ -1,2 +1,2 @@
-export * from './header/header.component';
+export * from './layout';
 export * from './home/home.component';

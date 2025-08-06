@@ -1,0 +1,55 @@
+<footer>
+    <div class="bg-gray-800 py-4 px-7 border-gray-700 border-1 border-t text-gray-400">
+        <div class="container px-4 mx-auto">
+            <div class="-mx-4 flex flex-wrap justify-start">
+                <div class="px-4 my-4 w-full sm:w-auto">
+                    <div>
+                        <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-white-600">Policies</h2>
+                    </div>
+                    <ul class="leading-8">
+                        <li><a routerLink="/terms-and-conditions" class="hover:text-blue-400">Terms &amp; Conditions</a>
+                        </li>
+                        <li><a routerLink="/privacy-policies" class="hover:text-blue-400">Privacy Policy</a></li>
+                        <li><a routerLink="/payment-policies" class="hover:text-blue-400">Refund Policy</a></li>
+                        <li><a routerLink="/shipping-policies" class="hover:text-blue-400">Shipping Policy</a></li>
+                    </ul>
+                </div>
+                <div class="px-4 my-4 w-full sm:w-auto">
+                    <div>
+                        <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-white-600">Contact Me</h2>
+                    </div>
+                    <ul class="leading-8">
+                        <li>Phone: {{primaryContact.phone}}</li>
+                        <li>Email: {{primaryContact.mail}}</li>
+                        <li>Place: {{primaryContact.place}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex justify-end pb-4" *ngIf="contactDetails">
+                <div class="flex">
+                    <a *ngIf="contactDetails.mail.id" class="p-1 bg-gray-700 m-1 rounded-lg shadow-md shadow-gray-800"
+                        [href]="'mailto:'+contactDetails.mail.id" title="Email">
+                        <img class="w-[35px] h-[35x] cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out"
+                            src="assets/img/contact/gmail-48.png" [alt]="contactDetails.mail.label">
+                    </a>
+                    <a *ngIf="contactDetails.git.id" class="p-1 bg-gray-700 m-1 rounded-lg shadow-md shadow-gray-800"
+                        [href]="'https://github.com/'+contactDetails.git.id" target="_blank" title="GitHub">
+                        <img class="w-[35px] h-[35x] cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out"
+                            src="assets/img/contact/git-48.png" [alt]="contactDetails.git.label">
+                    </a>
+                    <a *ngIf="contactDetails.twitter.id"
+                        class="p-1 bg-gray-700 m-1 rounded-lg shadow-md shadow-gray-800"
+                        [href]="'https://x.com/'+contactDetails.twitter.id" target="_blank" title="Twitter">
+                        <img class="w-[35px] h-[35x] cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out"
+                            src="assets/img/contact/twitter-48.png" [alt]="contactDetails.twitter.label">
+                    </a>
+                    <a class="p-1 bg-gray-700 m-1 rounded-lg shadow-md shadow-gray-800" href="assets/data/resume.pdf"
+                        download="Basavaraja.Hiruru-Angular-Developer.pdf" target="_blank" title="Download Resume">
+                        <img class="w-[35px] h-[35x] cursor-pointer hover:scale-110 transition-transform duration-300 ease-in-out"
+                            src="assets/img/contact/pdf-48.png" [alt]="contactDetails.resume.label">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

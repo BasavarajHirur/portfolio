@@ -11,7 +11,12 @@ import {
   ProfileComponent,
   SkillsComponent
 } from './sections';
-import { HeaderComponent, HomeComponent } from './page';
+import {
+  FooterComponent,
+  HeaderComponent,
+  HomeComponent,
+  PrivacyHeaderComponent
+} from './page';
 import {
   AnimateSkillsComponent,
   OtherSkillsComponent,
@@ -25,6 +30,13 @@ import { EffectsModule } from '@ngrx/effects';
 import { ScrollingAnimationDirective } from './director/scrolling-animation.directive';
 import { CommonEffect, commonReducer } from './store';
 import { SkillModalComponent } from './components/skills/skill-modal/skill-modal.component';
+import {
+  CommonTemplateComponent,
+  PaymentPoliciesComponent,
+  PrivacyPolicyComponent,
+  ShippingPoliciesComponent,
+  TermsAndConditionsComponent
+} from './components/policies';
 
 @NgModule({
   declarations: [
@@ -42,7 +54,14 @@ import { SkillModalComponent } from './components/skills/skill-modal/skill-modal
     AnimateSkillsComponent,
     OtherSkillsComponent,
     ScrollingAnimationDirective,
-    SkillModalComponent
+    SkillModalComponent,
+    TermsAndConditionsComponent,
+    PrivacyPolicyComponent,
+    PaymentPoliciesComponent,
+    ShippingPoliciesComponent,
+    CommonTemplateComponent,
+    PrivacyHeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

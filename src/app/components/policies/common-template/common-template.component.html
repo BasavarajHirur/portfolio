@@ -1,0 +1,9 @@
+<app-privacy-header></app-privacy-header>
+<div class="w-100 bg-[#1E1E1F] text-white p-7 pl-12">
+    <ul class="list-group list-group-flush pb-4" *ngFor="let detail of data;let i=index">
+        <h1 class="card-title font-bold pb-2"> {{i+1}}. {{ detail.label }}</h1>
+        <li class="list-group-item" *ngFor="let item of detail.content">
+            <span class="text-black-200">--</span> {{ item }}.
+        </li>
+    </ul>
+</div>
