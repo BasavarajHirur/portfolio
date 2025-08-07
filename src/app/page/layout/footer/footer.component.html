@@ -1,5 +1,5 @@
 <footer>
-    <div class="bg-gray-800 py-4 px-7 border-gray-700 border-1 border-t text-gray-400">
+    <div class="bg-gray-800 py-4 px-7 border-gray-700 border-1 border-t text-gray-400" *ngIf="contactDetails">
         <div class="container px-4 mx-auto">
             <div class="-mx-4 flex flex-wrap justify-start">
                 <div class="px-4 my-4 w-full sm:w-auto">
@@ -25,7 +25,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="flex justify-end pb-4" *ngIf="contactDetails">
+            <div class="flex justify-end pb-4">
                 <div class="flex">
                     <a *ngIf="contactDetails.mail.id" class="p-1 bg-gray-700 m-1 rounded-lg shadow-md shadow-gray-800"
                         [href]="'mailto:'+contactDetails.mail.id" title="Email">
