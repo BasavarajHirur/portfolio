@@ -1,9 +1,9 @@
 <!-- Header Section -->
-<nav class="fixed top-0 left-0 w-full z-50 transition-colors duration-400 border-gray-200 py-5" [ngStyle]="{
-    backgroundColor: 'rgba(31, 41, 55,' + bgOpacity + ')'}">
-    <div class="flex flex-wrap items-center gap-4 max-w-screen-xl px-12 mx-auto justify-between md:justify-start">
+<nav class="fixed top-0 left-0 bg-gray-900 w-full z-50 transition-colors duration-400 border-gray-200 py-5 lg:bg-[rgba(31,41,55,var(--bg-opacity))]"
+    [style.--bg-opacity]="bgOpacity">
+    <div class="flex flex-wrap items-center gap-4 max-w-screen-xl px-7 mx-auto justify-between md:justify-start">
         <a href="#" class="flex items-center">
-            <img src="/assets/img/profile-1.JPG" class="h-6 mr-3 sm:h-9 rounded-full" alt="Landwind Logo">
+            <img src="/assets/img/profile-1.JPG" class="h-9 lg:mr-7 rounded-md" alt="Landwind Logo">
         </a>
         <div class="flex items-center lg:order-2">
             <button data-collapse-toggle="mobile-menu-2" type="button" (click)="toggleMenu()"
