@@ -37,6 +37,7 @@ import {
   ShippingPoliciesComponent,
   TermsAndConditionsComponent
 } from './components/policies';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import {
     ShippingPoliciesComponent,
     CommonTemplateComponent,
     PrivacyHeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

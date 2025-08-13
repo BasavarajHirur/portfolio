@@ -9,7 +9,7 @@ import { selectUserData } from 'src/app/store';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  public data$!: Observable<any>;
+  public data: any;
   public activeSection = 'profile';
   public sectionIds = ['profile', 'experience', 'skills', 'education', 'contact'];
   private isScrolling = false;
@@ -18,7 +18,13 @@ export class HomeComponent {
   constructor(private store: Store) { }
 
   ngOnInit(): void {
-    this.data$ = this.store.select(selectUserData);
+    this.store.select(selectUserData).subscribe(
+      res => {
+        if (res) {
+          this.data = res;
+        }
+      }
+    )
   }
 
   animateScrollTo(targetY: number, duration: number = 600) {

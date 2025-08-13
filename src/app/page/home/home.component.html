@@ -1,36 +1,41 @@
-<app-header [activeSection]="activeSection" (sectionScroll)="handleScroll($event)"></app-header>
-<div class="main-container" *ngIf="data$ | async as data">
-    <!--Profile-->
-    <section id="profile" class="relative h-[300px] lg:h-[100vh] w-100 flex justify-center items-center">
-        <div
-            class="bg-[url('/assets/img/profile/bg1.jpg')] bg-fixed bg-no-repeat bg-cover w-[100%] h-[300px] lg:h-[100vh] w-100">
-            <div class="h-[100%] w-[100%] bg-[linear-gradient(rgba(0,0,0,0.5),black)]"></div>
-        </div>
-        <app-profile></app-profile>
-    </section>
-    <!--Experience-->
-    <section id="experience" class="h-[450px] lg:h-[100vh] bg-[linear-gradient(#292929,#333333)]">
-        <h1 class="font-bold px-7 pt-7 text-white text-center text-2xl">{{data.experience.label}}</h1>
-        <div class="indent-4 px-12 py-7">
-            <app-experience></app-experience>
-        </div>
-    </section>
-    <!--Skills-->
-    <section id="skills" class="w-100 bg-[#292929]">
-        <h1 class="font-bold px-7 pt-7 text-white text-center text-2xl">{{data.technicalSkills.label}}</h1>
-        <div class="indent-4 px-12 py-7">
-            <app-skills></app-skills>
-        </div>
-    </section>
-    <!--Education-->
-    <section id="education" class="w-100 bg-[linear-gradient(#333333,#292929)]">
-        <h1 class="font-bold px-7 pt-7 text-white text-center text-2xl">{{data.education.label}}</h1>
-        <div class="indent-4 px-12 py-7">
-            <app-education></app-education>
-        </div>
-    </section>
-    <!--Contacts-->
-    <section id="contact">
-        <app-footer></app-footer>
-    </section>
+<div class="w-0 h-[65vh] mx-auto translate-x-[50%] translate-y-[50%]" *ngIf="!data;else elseTemplate">
+    <app-loader></app-loader>
 </div>
+<ng-template #elseTemplate>
+    <app-header [activeSection]="activeSection" (sectionScroll)="handleScroll($event)"></app-header>
+    <div class="main-container">
+        <!--Profile-->
+        <section id="profile" class="relative h-[300px] lg:h-[100vh] w-100 flex justify-center items-center">
+            <div
+                class="bg-[url('/assets/img/profile/bg1.jpg')] bg-fixed bg-no-repeat bg-cover w-[100%] h-[300px] lg:h-[100vh] w-100">
+                <div class="h-[100%] w-[100%] bg-[linear-gradient(rgba(0,0,0,0.5),black)]"></div>
+            </div>
+            <app-profile></app-profile>
+        </section>
+        <!--Experience-->
+        <section id="experience" class="h-[450px] lg:h-[100vh] bg-[linear-gradient(#292929,#333333)]">
+            <h1 class="font-bold px-7 pt-7 text-white text-center text-2xl">{{data.experience.label}}</h1>
+            <div class="indent-4 px-12 py-7">
+                <app-experience></app-experience>
+            </div>
+        </section>
+        <!--Skills-->
+        <section id="skills" class="w-100 bg-[#292929]">
+            <h1 class="font-bold px-7 pt-7 text-white text-center text-2xl">{{data.technicalSkills.label}}</h1>
+            <div class="indent-4 px-12 py-7">
+                <app-skills></app-skills>
+            </div>
+        </section>
+        <!--Education-->
+        <section id="education" class="w-100 bg-[linear-gradient(#333333,#292929)]">
+            <h1 class="font-bold px-7 pt-7 text-white text-center text-2xl">{{data.education.label}}</h1>
+            <div class="indent-4 px-12 py-7">
+                <app-education></app-education>
+            </div>
+        </section>
+        <!--Contacts-->
+        <section id="contact">
+            <app-footer></app-footer>
+        </section>
+    </div>
+</ng-template>
