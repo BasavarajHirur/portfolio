@@ -1,7 +1,7 @@
 <ng-container *ngIf="experienceData$ | async">
     <section *ngIf="!isSmallScreen" class="custom-style flex flex-nowrap rounded-md shadow-md shadow-black"
         (mouseenter)="mouseEnter()" (mouseleave)="mouseOut()">
-        <div class="custom-exp relative px-12 py-7 h-[80vh] bg-[linear-gradient(#CCCCFF,white)] overflow-x-hidden"
+        <div class="custom-exp relative px-12 py-7 h-[80vh] bg-[url('/assets/img/exp.png')] overflow-x-hidden"
             [id]="'div'+ exp.id" *ngFor="let exp of experienceData.details">
             <div class="font-bold text-lg pb-4 indent-0">
                 {{exp.company}}

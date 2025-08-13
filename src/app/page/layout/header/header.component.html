@@ -1,8 +1,9 @@
 <!-- Header Section -->
-<nav class="bg-gray-900 border-gray-200 py-5">
+<nav class="fixed top-0 left-0 w-full z-50 transition-colors duration-400 border-gray-200 py-5" [ngStyle]="{
+    backgroundColor: 'rgba(31, 41, 55,' + bgOpacity + ')'}">
     <div class="flex flex-wrap items-center gap-4 max-w-screen-xl px-12 mx-auto justify-between md:justify-start">
         <a href="#" class="flex items-center">
-            <img src="/assets/img/logo.jpg" class="h-6 mr-3 sm:h-9" alt="Landwind Logo">
+            <img src="/assets/img/profile-1.JPG" class="h-6 mr-3 sm:h-9 rounded-full" alt="Landwind Logo">
         </a>
         <div class="flex items-center lg:order-2">
             <button data-collapse-toggle="mobile-menu-2" type="button" (click)="toggleMenu()"
@@ -24,31 +25,10 @@
         <div [ngClass]="{'hidden': !isOpen, 'block': isOpen}"
             class="items-center justify-between w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
             <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                <li (click)="scrollTo('profile')">
+                <li *ngFor="let item of menuItems" (click)="scrollTo(item)">
                     <a href="#"
                         class="block py-2 pl-3 pr-4 border-b lg:border-0 lg:hover:text-purple-700 lg:p-0 text-gray-400 lg:hover:text-white hover:bg-gray-700 hover:text-white lg:hover:bg-transparent border-gray-700"
-                        [class]="{'active': selectedSection === 'profile'}">Profile</a>
-                </li>
-                <li (click)="scrollTo('experience')">
-                    <a href="#"
-                        class="block py-2 pl-3 pr-4 border-b lg:border-0 lg:hover:text-purple-700 lg:p-0 text-gray-400 lg:hover:text-white hover:bg-gray-700 hover:text-white lg:hover:bg-transparent border-gray-700"
-                        [class]="{'active': selectedSection === 'experience'}">Work
-                        Experience</a>
-                </li>
-                <li (click)="scrollTo('skills')">
-                    <a href="#"
-                        class="block py-2 pl-3 pr-4 border-b lg:border-0 lg:hover:text-purple-700 lg:p-0 text-gray-400 lg:hover:text-white hover:bg-gray-700 hover:text-white lg:hover:bg-transparent border-gray-700"
-                        [class]="{'active': selectedSection === 'skills'}">Skills</a>
-                </li>
-                <li (click)="scrollTo('education')">
-                    <a href="#"
-                        class="block py-2 pl-3 pr-4 border-b lg:border-0 lg:hover:text-purple-700 lg:p-0 text-gray-400 lg:hover:text-white hover:bg-gray-700 hover:text-white lg:hover:bg-transparent border-gray-700"
-                        [class]="{'active': selectedSection === 'education'}">Education</a>
-                </li>
-                <li (click)="scrollTo('contact')">
-                    <a href="#"
-                        class="block py-2 pl-3 pr-4 border-b lg:border-0 lg:hover:text-purple-700 lg:p-0 text-gray-400 lg:hover:text-white hover:bg-gray-700 hover:text-white lg:hover:bg-transparent border-gray-700"
-                        [class]="{'active': selectedSection === 'contact'}">Contact</a>
+                        [class.text-white]="activeSection === item">{{item | titlecase}}</a>
                 </li>
             </ul>
         </div>

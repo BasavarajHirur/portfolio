@@ -1,9 +1,9 @@
-<app-header (sectionScroll)="handleScroll($event)"></app-header>
+<app-header [activeSection]="activeSection" (sectionScroll)="handleScroll($event)"></app-header>
 <div class="main-container" *ngIf="data$ | async as data">
     <!--Profile-->
     <section id="profile" class="relative h-[300px] lg:h-[100vh] w-100 flex justify-center items-center">
         <div
-            class="bg-[url('/assets/img/profile/bg1.jpg')] bg-fixed bg-no-repeat bg-cover w-[100%] h-[300px] lg:h-[100vh] w-100 flex justify-center items-center sm:bg-contains">
+            class="bg-[url('/assets/img/profile/bg1.jpg')] bg-fixed bg-no-repeat bg-cover w-[100%] h-[300px] lg:h-[100vh] w-100">
             <div class="h-[100%] w-[100%] bg-[linear-gradient(rgba(0,0,0,0.5),black)]"></div>
         </div>
         <app-profile></app-profile>
