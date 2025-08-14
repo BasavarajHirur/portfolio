@@ -1,76 +1,46 @@
-<ng-container *ngIf="experienceData$ | async">
-    <section *ngIf="!isSmallScreen" class="custom-style flex flex-nowrap rounded-md shadow-md shadow-black"
-        (mouseenter)="mouseEnter()" (mouseleave)="mouseOut()">
-        <div class="custom-exp relative px-12 py-7 h-[80vh] bg-[url('/assets/img/exp.png')] overflow-x-hidden"
-            [id]="'div'+ exp.id" *ngFor="let exp of experienceData.details">
-            <div class="font-bold text-lg pb-4 indent-0">
-                {{exp.company}}
+<ul class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+    <li *ngFor="let exp of experienceData.details; let i=index">
+        <div class="timeline-middle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" class="h-5 w-5">
+                <path fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clip-rule="evenodd" />
+            </svg>
+        </div>
+        <div class="relative timeline-box overflow-hidden"
+            [class]="isSmallScreen ? 'timeline-end w-[75vw]': (i % 2 === 0 ? 'timeline-start md:text-end' : 'timeline-end')">
+            <img [src]="exp.logo" class="absolute top-1 right-2 hidden md:block"
+                [class]="i%2 === 0 ? 'left-2' : 'right-2'">
+            <div class="inline-block" [class]="isSmallScreen ? '' : (i%2 === 0) ? 'md:text-end' : ''">
+                <div class="text-lg font-black">{{exp.company}}</div>
+                <div class="text-sm italic font-black md:text-start">{{exp.role}}</div>
+                <div class="font-mono italic md:text-start">
+                    {{exp.DOJ}} <span class="font-bold">to</span> {{exp.DOL || 'Present'}}
+                </div>
+                <div class="text-sm italic md:text-start">{{exp.location}}</div>
             </div>
-            <table style="border-spacing: 10px;">
-                <tr>
-                    <th class="font-bold">Role:</th>
-                    <td>{{exp.role}}</td>
-                </tr>
-                <tr>
-                    <th class="font-bold">Duration:</th>
-                    <td>{{exp.DOJ}} <span class="font-bold">-</span> {{exp.DOL || 'Present'}}</td>
-                </tr>
-                <tr>
-                    <th class="font-bold">Location:</th>
-                    <td>{{exp.location}}</td>
-                </tr>
-            </table>
-            <div class="ml-4">
-                <div *ngFor="let summary of exp.workDetails" class="flex items-baseline">
+            <div class="ml-4 mt-2 mb-9 md:text-start">
+                <div *ngFor="let summary of exp.workDetails" class="flex items-baseline text-sm">
                     <span class="text-[20px] pr-2 leading-2">&#9733;</span>
                     <span class="flex-1 indent-0">{{summary}}</span>
                 </div>
             </div>
-            <div class="ml-4 mt-4" *ngIf="exp.projects.length">
-                <a class="text-red-600 cursor-pointer underline mr-1" (click)="showExpModalDetials(true, exp.id)">Click
-                    here </a>
-                to see Projects...
+            <div [id]="'projectId-'+i" #projectRef *ngIf="exp.projects.length > 0"
+                class="absolute bottom-9 left-0 w-full bg-gray-600 translate-y-full transform transition-transform duration-500 ease-in-out">
+                <div class="relative">
+                    <button (click)="openProjectDetails(projectRef, arrowRef,title, exp.id)"
+                        class="p-2 rounded-full bg-transparent transform transition-transform duration-300">
+                        <svg #arrowRef class="w-5 h-5 transform transition-transform duration-300" fill="none"
+                            stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div #title class="absolute right-1/2 top-2 hidden text-lg font-bold">Projects</div>
+                </div>
+                <app-project-details></app-project-details>
             </div>
-            <img [src]="exp.logo" class="absolute top-4 right-7 h-[100px] w-[180px]">
         </div>
-    </section>
-    <section *ngIf="isSmallScreen" class="custom-style flex flex-nowrap rounded-md shadow-md shadow-black"
-        (mouseenter)="mouseEnter()" (mouseleave)="mouseOut()">
-        <div class="custom-exp relative px-2 bg-[linear-gradient(#CCCCFF,white)]" [id]="'div'+ exp.id"
-            *ngFor="let exp of experienceData.details">
-            <div class="font-bold  text-center mt-11 pb-4">
-                {{exp.company}}
-            </div>
-            <table style="border-spacing: 10px;">
-                <tr>
-                    <th class="font-bold">Role:</th>
-                    <td>{{exp.role}}</td>
-                </tr>
-                <tr>
-                    <th class="font-bold">Duration:</th>
-                    <td>{{exp.DOJ}} <span class="font-bold">-</span> {{exp.DOL || 'Present'}}</td>
-                </tr>
-                <tr>
-                    <th class="font-bold">Location:</th>
-                    <td>{{exp.location}}</td>
-                </tr>
-            </table>
-            <div class="my-4 indent-0" *ngIf="exp.projects.length">
-                <a class="text-red-600 cursor-pointer underline mr-1" (click)="showExpModalDetials(true, exp.id)">Click
-                    here </a>
-                to see Projects...
-            </div>
-            <img [src]="exp.logo" class="absolute top-1 right-2 h-[40px] w-[60px]">
-        </div>
-    </section>
-    <div class="flex flex-column justify-center gap-4 mt-2">
-        <div class="bg-gray-500 rounded-md border-2 border-white-500 h-[10px] w-[40px] cursor-pointer"
-            *ngFor="let  exp of experienceData.details; let i=index" (click)="paginate(i+1)"
-            [style.backgroundColor]="currentPaginateIndex === i+1 ? 'white' : ''" (mouseenter)="mouseEnter()"
-            (mouseleave)="mouseOut()">
-        </div>
-    </div>
-</ng-container>
-<div *ngIf="showModalDetails">
-    <app-project-details></app-project-details>
-</div>
+        <hr *ngIf="experienceData.details.length > i+1" class="h-[100%]"
+            [class]="i%2 === 0 ? 'bg-primary': 'bg-secondary'" />
+    </li>
+</ul>

@@ -14,6 +14,7 @@ export class ExperienceComponent implements OnInit, OnDestroy {
   public currentPaginateIndex: number = 1;
   public interval: any;
   public showModalDetails = false;
+  public isShowingPrjDetails = false;
 
   private destroy$ = new Subject<void>();
   public isSmallScreen = window.innerWidth < 1024;
@@ -80,10 +81,28 @@ export class ExperienceComponent implements OnInit, OnDestroy {
       })
   }
 
-  showExpModalDetials(condition: boolean, companyId: string) {
-    this.store.dispatch(show_project_modal({ isShowing: condition }));
-    this.store.dispatch(Get_Company_Project_Details({ companyId}));
+  openProjectDetails(projectRef: HTMLElement, arrowRef: HTMLElement, titleRef: HTMLElement, companyId: string) {
+    // Toggle slide (translate-y-full)
+    projectRef.classList.toggle('translate-y-full');
+
+    // Toggle rotation on the arrow
+    arrowRef.classList.toggle('rotate-180');
+
+    //Toggle Title
+    titleRef.classList.toggle('hidden');
+
+    // Toggle bottom position
+    if (projectRef.classList.contains('bottom-9')) {
+      projectRef.classList.remove('bottom-9');
+      projectRef.classList.add('bottom-0');
+    } else {
+      projectRef.classList.remove('bottom-0');
+      projectRef.classList.add('bottom-9');
+    }
+
+    this.store.dispatch(Get_Company_Project_Details({ companyId }));
   }
+
 
   ngOnDestroy(): void {
     this.destroy$.next();

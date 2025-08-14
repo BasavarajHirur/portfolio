@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subject, takeUntil } from 'rxjs';
-import { selectedCompany, show_project_modal } from 'src/app/store';
+import { selectedCompany } from 'src/app/store';
 
 @Component({
   selector: 'app-project-details',
@@ -23,10 +23,6 @@ export class ProjectDetailsComponent implements OnInit {
           this.selectedCompanyDetails = res;
         }
       )
-  }
-
-  closeSkillDetials(condition: boolean) {
-    this.store.dispatch(show_project_modal({ isShowing: condition }));
   }
 
   ngOnDestroy(): void {
